@@ -19,6 +19,13 @@ body {
     background-color: black;
 }
 
+img[alt="logo"] {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;

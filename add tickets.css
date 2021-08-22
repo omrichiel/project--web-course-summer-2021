@@ -7,8 +7,8 @@ justify-content: center;
 background-color: black;
 }
 
-img {
-    display:block;
+img[alt="logo"] {
+    display: block;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -79,17 +79,6 @@ nav ul li span:nth-child(4) {
     --n: 4;
 }
 
-.search {
-    height: 20px;
-}
-
-img[id="search"] {
-    height: 20px;
-}
-input[id="search"] {
-    height: 20px;
-}
-
 h2 {
     text-align: center;
     color: purple;
@@ -97,7 +86,7 @@ h2 {
 }
 
 .add-ticket {
-    width: 50%;
+    width: 800px;
     box-shadow: 0 4px 8px 0 purple;
     border-color: purple;
     padding: 20px;
@@ -105,8 +94,12 @@ h2 {
     margin-right: auto;
 }
 
+p[id="requiredField"] {
+    color: red;
+    font-family: sans-serif;
+}
+
 label {
-    padding-left: 30px;
     padding-right: 3px;
     font-family: sans-serif;
     font-weight: bold;
@@ -119,10 +112,61 @@ input, select {
     border-bottom-color: purple;
     background-color:black;
     color: white;
+    margin-right: 30px;
+    margin-bottom: 50px;
 }
 
 textarea {
     border: 2px solid;
     border-color: purple;
     background-color: black;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 800px){
+    label[for="category"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="openGatesTime"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="startTime"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="endTime"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="address"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="chair"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="area"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="salePrice"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    label[for="quantity"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+
+    .add-ticket {
+        width: 80%;
+        box-shadow: 0 4px 8px 0 purple;
+        border-color: purple;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
