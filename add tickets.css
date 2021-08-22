@@ -14,25 +14,25 @@ padding: 0;
 }
 
 nav ul li {
-display: inline-table;
---c: White;
-color: purple;
-font-size: 16px;
-border: 0.3em solid var(--c);
-border-radius: 0.5em;
-width: 22%;
-height: 3em;
-text-transform: uppercase;
-font-weight: bold;
-font-family: sans-serif;
-letter-spacing: 0.1em;
-text-align: center;
-line-height: 3em;
-position: relative;
-overflow: hidden;
-z-index: 1;
-transition: 0.5s;
-margin: 1em;
+    display: inline-table;
+    --c: White;
+    color: purple;
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 22%;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
 }
 
 nav ul li span {
@@ -86,13 +86,12 @@ input[id="search"] {
 h2 {
     text-align: center;
     color: purple;
+    font-family: sans-serif;
 }
 
 .add-ticket {
-    background-color: white;
     width: 50%;
-    border: 5px solid;
-    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 purple;
     border-color: purple;
     padding: 20px;
     margin-left: auto;
@@ -102,4 +101,21 @@ h2 {
 label {
     padding-left: 30px;
     padding-right: 3px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: purple;
+}
+
+input, select {
+    border: 2px solid;
+    border-color: black;
+    border-bottom-color: purple;
+    background-color:black;
+    color: white;
+}
+
+textarea {
+    border: 2px solid;
+    border-color: purple;
+    background-color: black;
 }
