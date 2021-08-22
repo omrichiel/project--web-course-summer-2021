@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Ticket-Viewing </title>
+    <link rel="stylesheet" href="tickets.css">
+
+</head>
+<body>
+    <h1>
+        <center><img src="logo.png" alt="logo" style="width: 400px" /></center>
+    </h1>
+    <br>
+    <nav>
+        <ul>
+            <li>
+                Home
+                <span></span><span></span><span></span><span></span>
+            </li>
+            <li>
+                Find Tickets
+                <span></span><span></span><span></span><span></span>
+            </li>
+            <li>
+                My Profile
+                <span></span><span></span><span></span><span></span>
+            </li>
+            <li>
+                Contact Us
+                <span></span><span></span><span></span><span></span>
+            </li>
+        </ul>
+    </nav>
+    <br />
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('Concerts')"> Concerts </button>
+        <button class="btn" onclick="filterSelection('Sports')"> Sports </button>
+        <button class="btn" onclick="filterSelection('StandUp Comedy')"> StandUp Comedy </button>
+        <button class="btn" onclick="filterSelection('Partys')"> Partys </button>
+    </div>
+
+    <div class="container">
+        <div class="filterDiv Concerts ">Rock Shows </div>
+        <div class="filterDiv Sports">Soccer </div>
+        <div class="filterDiv Concerts ">MainStream </div>
+        <div class="filterDiv Sports">BasketBall </div>
+        <div class="filterDiv Concerts">Yam Tichoni </div>
+        <div class="filterDiv Sports">FootBall </div>
+        <div class="filterDiv Partys">MainStream </div>
+        <div class="filterDiv Partys">Trance </div>
+        <div class="filterDiv Partys">Techno </div>
+        <div class="filterDiv Partys">Yam Tichoni </div>
+    </div>
+
+
+
+
+    <div class="card">
+        <h1 style="color:white;">Ticket </h1>
+        <p class="price">$19.99</p>
+        <p>Some text about the ticket..</p>
+        <img src="man1.jpg" alt=" profile picture" style="width:100%">
+        <p><button>Seller Details </button></p>
+    </div>
+    <div class="card2">
+        <h1 style="color:white;">Ticket </h1>
+        <p class="price2">$19.99</p>
+        <p>Some text about the ticket..</p>
+        <img src="man2.jpg" alt=" profile picture" style="width:100%">
+        <p><button>Seller Details </button></p>
+    </div>
+    <div class="card3">
+        <h1 style="color:white;">Ticket </h1>
+        <p class="price3">$19.99</p>
+        <p>Some text about the ticket..</p>
+        <img src="man3.jpg" alt=" profile picture" style="width:100%">
+        <p><button>Seller Details </button></p>
+    </div>
+
+
+</body>
+</html>

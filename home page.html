@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home page.css" />
+</head>
+<body>
+    <h1>
+        <center><img src="logo.png" alt="logo" style="width: 400px" /></center>
+    </h1>
+    <br>
+    <nav>
+        <ul>
+            <li>
+                Home
+                <span></span><span></span><span></span><span></span>
+            </li>
+            <li>
+                Find Tickets
+                <span></span><span></span><span></span><span></span>
+            </li>
+            <li>
+                My Profile
+                <span></span><span></span><span></span><span></span>
+            </li>
+            <li>
+                Contact Us
+                <span></span><span></span><span></span><span></span>
+            </li>
+        </ul>
+    </nav>
+    <br />
+    <div class="search">
+        <input type="text" id="search" name="search">
+        <img id="search" src="magnifying glass.png" alt="search" />
+    </div>
+    <br /><br />
+    <h2 style="text-align: center">Offer a New Ticket For Sale</h2>
+    <form>
+        <div class="add-ticket">
+            <span>
+                <label for="eventName">Event name:</label>
+                <input type="text" id="eventName" name="eventName" style="width: 75%" required>
+            </span>
+            <br /><br />
+            <span>
+                <label for="category" style="">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="other">other</option>
+                    <option value="music-shows">music shows</option>
+                    <option value="sport-events">sport events</option>
+                    <option value="stand-up-comedy">stent up comedy</option>
+                    <option value="parties">parties</option>
+                    <option value="festivals">festivals</option>
+                    <option value="theater">theater</option>
+                    <option value="cinema">cinema</option>
+                </select>
+                <label for="startDate">Start date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+                <label for="openGatesTime">Open gates time:</label>
+                <input type="time" id="openGatesTime" name="openGatesTime">
+            </span>
+            <br /><br />
+            <span>
+                <label for="startTime">Start time:</label>
+                <input type="time" id="startTime" name="startTime" required>
+                <label for="endDate">End date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+                <label for="endTime">End time:</label>
+                <input type="time" id="endTime" name="endTime">
+            </span>
+            <br /><br />
+            <span>
+                <label for="place">Place:</label>
+                <input type="text" id="place" name="place" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </span>
+            <br /><br />
+            <span>
+                <label for="row">Row:</label>
+                <input type="number" id="row" name="row" style="width: 30px">
+                <label for="chair">Chair:</label>
+                <input type="number" id="chair" name="chair" style="width: 30px">
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="area">
+            </span>
+            <br /><br />
+            <span>
+                <label for="purchasePrice">Purchase price:</label>
+                <input type="text" id="purchasePrice" name="purchasePrice" style="width: 30px" required>
+                <label for="salePrice">Sale price:</label>
+                <input type="text" id="salePrice" name="salePrice" style="width: 30px" required>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" style="width: 30px" required>
+            </span>
+            <br /><br />
+            <span>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="attachment">Attach tickets files:</label>
+                <input type="file" id="attachment" name="attachment" multiple>
+            </span>
+        </div>
+        <br />
+        <button>Finish</button>
+    </form>
+</body>
+</html>
