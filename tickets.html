@@ -10,34 +10,48 @@
 <body>
     <img src="logo.jpeg" alt="logo">
     <br>
-    <nav>
-        <ul>
-            <li>
-                Home
-                <span></span><span></span><span></span><span></span>
-            </li>
-            <li>
-                Find Tickets
-                <span></span><span></span><span></span><span></span>
-            </li>
-            <li>
-                My Profile
-                <span></span><span></span><span></span><span></span>
-            </li>
-            <li>
-                Contact Us
-                <span></span><span></span><span></span><span></span>
-            </li>
-        </ul>
-    </nav>
-    <br />
-    <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <table class="nav"">
+        <tr>
+            <td id="firstTab">
+                <div class="tab">
+                    Home
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </td>
+            <td>
+                <div class="tab">
+                    Find Tickets
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </td>
+            <td>
+                <div class="tab">
+                    My Profile
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </td>
+            <td>
+                <div class="tab">
+                    Contact Us
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+
+    <div class="myBtnContainer">
+        <button class="btn" onclick="filterSelection('all')"> Show all </button>
         <button class="btn" onclick="filterSelection('Concerts')"> Concerts </button>
         <button class="btn" onclick="filterSelection('Sports')"> Sports </button>
-        <button class="btn" onclick="filterSelection('StandUp Comedy')"> StandUp Comedy </button>
-        <button class="btn" onclick="filterSelection('Partys')"> Partys </button>
+        <button class="btn" onclick="filterSelection('Stand Up Comedy')"> Stand Up Comedy </button>
+        <button class="btn" onclick="filterSelection('Parties')"> Parties </button>
+        <button class="btn" onclick="filterSelection('Festivals')"> Festivals </button>
+        <button class="btn" onclick="filterSelection('Theater')"> Theater </button>
+        <button class="btn" onclick="filterSelection('Cinema')"> Cinema </button>
+        <button class="btn" onclick="filterSelection('Partys')"> Other </button>
     </div>
+    <br /><br />
 
     <div class="container">
         <div class="filterDiv Concerts ">Rock Shows </div>
@@ -53,30 +67,95 @@
     </div>
 
 
-
-
-    <div class="card">
-        <h1 style="color:white;">Ticket </h1>
-        <p class="price">$19.99</p>
-        <p>Some text about the ticket..</p>
-        <img src="man1.jpg" alt=" profile picture" style="width:100%">
-        <p><button>Seller Details </button></p>
-    </div>
-    <div class="card2">
-        <h1 style="color:white;">Ticket </h1>
-        <p class="price2">$19.99</p>
-        <p>Some text about the ticket..</p>
-        <img src="man2.jpg" alt=" profile picture" style="width:100%">
-        <p><button>Seller Details </button></p>
-    </div>
-    <div class="card3">
-        <h1 style="color:white;">Ticket </h1>
-        <p class="price3">$19.99</p>
-        <p>Some text about the ticket..</p>
-        <img src="man3.jpg" alt=" profile picture" style="width:100%">
-        <p><button>Seller Details </button></p>
-    </div>
-
-
+    <table class="tickets">
+        <tr>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man1.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man2.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man3.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man1.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man2.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man3.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man1.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man2.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <h1 style="color:white;">Ticket </h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the ticket..</p>
+                    <img src="man3.jpg" alt=" profile picture" style="width:100%">
+                    <p><button>Seller Details </button></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br /><br /><br />
 </body>
 </html>
