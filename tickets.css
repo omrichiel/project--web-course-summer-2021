@@ -1,16 +1,4 @@
-﻿
-
-h1 {
-    color: black;
-    text-align: center;
-    font-size: 50px
-}
-
-h3 {
-    color: white;
-}
-
-body {
+﻿body {
     margin: 0;
     height: 100vh;
     display: inline;
