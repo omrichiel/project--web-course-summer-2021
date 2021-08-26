@@ -1,190 +1,194 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <title>Ticket-Viewing </title>
-    <link rel="stylesheet" href="tickets.css">
+    <head>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Tickets</title>
+        <link rel="stylesheet" href="tickets.css">
+    </head>
 
-</head>
-<body>
-    <img src="logo.jpeg" alt="logo">
-    <br>
-    <table class="nav">
-        <tr>
-            <td id="firstTab">
-                <div class="tab">
-                    Home
-                    <span></span><span></span><span></span><span></span>
-                </div>
-            </td>
-            <td>
-                <div class="tab">
-                    Find Tickets
-                    <span></span><span></span><span></span><span></span>
-                </div>
-            </td>
-            <td>
-                <div class="tab">
-                    My Profile
-                    <span></span><span></span><span></span><span></span>
-                </div>
-            </td>
-            <td>
-                <div class="tab">
-                    Contact Us
-                    <span></span><span></span><span></span><span></span>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <br /><br />
+    <body>
+        <!--start header-->
+        <br /><br />
+        <a id="sign-in">Sign In</a>
+        <img src="logo.jpeg" alt="logo">
+        <br>
+        <table class="nav">
+            <tr>
+                <td id="firstTab">
+                    <div class="tab" onclick="location.href='home page.html'">
+                        Home
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='tickets.html'">
+                        Find Tickets
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='my profile.html'">
+                        My Profile
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='Contact page.html'">
+                        Contact Us
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br /><br />
+        <!--end header-->
 
-    <div class="myBtnContainer">
-        <button class="btn" onclick="filterSelection('all')"> Show all </button>
-        <button class="btn" onclick="filterSelection('Concerts')"> Concerts </button>
-        <button class="btn" onclick="filterSelection('Sports')"> Sports </button>
-        <button class="btn" onclick="filterSelection('Stand Up Comedy')"> Stand Up Comedy </button>
-        <button class="btn" onclick="filterSelection('Parties')"> Parties </button>
-        <button class="btn" onclick="filterSelection('Festivals')"> Festivals </button>
-        <button class="btn" onclick="filterSelection('Theater')"> Theater </button>
-        <button class="btn" onclick="filterSelection('Cinema')"> Cinema </button>
-        <button class="btn" onclick="filterSelection('Partys')"> Other </button>
-    </div>
-    <br /><br />
+        <div class="myBtnContainer">
+            <button class="btn" onclick="filterSelection('all')"> Show all </button>
+            <button class="btn" onclick="filterSelection('Concerts')"> Concerts </button>
+            <button class="btn" onclick="filterSelection('Sports')"> Sports </button>
+            <button class="btn" onclick="filterSelection('Stand Up Comedy')"> Stand Up Comedy </button>
+            <button class="btn" onclick="filterSelection('Parties')"> Parties </button>
+            <button class="btn" onclick="filterSelection('Festivals')"> Festivals </button>
+            <button class="btn" onclick="filterSelection('Theater')"> Theater </button>
+            <button class="btn" onclick="filterSelection('Cinema')"> Cinema </button>
+            <button class="btn" onclick="filterSelection('Partys')"> Other </button>
+        </div>
+        <br /><br />
 
-    <div class="container">
-        <div class="filterDiv Concerts ">Rock Shows </div>
-        <div class="filterDiv Sports">Soccer </div>
-        <div class="filterDiv Concerts ">MainStream </div>
-        <div class="filterDiv Sports">BasketBall </div>
-        <div class="filterDiv Concerts">Yam Tichoni </div>
-        <div class="filterDiv Sports">FootBall </div>
-        <div class="filterDiv Partys">MainStream </div>
-        <div class="filterDiv Partys">Trance </div>
-        <div class="filterDiv Partys">Techno </div>
-        <div class="filterDiv Partys">Yam Tichoni </div>
-    </div>
+        <div class="container">
+            <div class="filterDiv Concerts ">Rock Shows </div>
+            <div class="filterDiv Sports">Soccer </div>
+            <div class="filterDiv Concerts ">MainStream </div>
+            <div class="filterDiv Sports">BasketBall </div>
+            <div class="filterDiv Concerts">Yam Tichoni </div>
+            <div class="filterDiv Sports">FootBall </div>
+            <div class="filterDiv Partys">MainStream </div>
+            <div class="filterDiv Partys">Trance </div>
+            <div class="filterDiv Partys">Techno </div>
+            <div class="filterDiv Partys">Yam Tichoni </div>
+        </div>
 
-    <div class="tickets">
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+        <div class="tickets">
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man1.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man1.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man2.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man2.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man3.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man3.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man1.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man1.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man2.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man2.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man3.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man3.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man1.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man1.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man2.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man2.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
-        </div>
-        <div class="card">
-            <h2 style="color:white;">Event Name</h2>
-            <p class="place">Place Name</p>
-            <p class="address">Address</p>
-            <p class="price">$19.99</p>
-            <div class="datetime">
-                <p class="date">dd/mm/yyyy</p>
-                <p class="time">00:00</p>
+            <div class="card">
+                <h2 style="color:white;">Event Name</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+                <br /><br />
+                <img src="man3.jpg" alt=" profile picture" style="width:100%">
+                <p><button>Seller Details </button></p>
             </div>
-            <br /><br />
-            <img src="man3.jpg" alt=" profile picture" style="width:100%">
-            <p><button>Seller Details </button></p>
         </div>
-    </div>
-    <br /><br /><br />
-</body>
+        <br /><br /><br />
+    </body>
 </html>

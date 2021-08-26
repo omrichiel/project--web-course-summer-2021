@@ -1,4 +1,8 @@
-﻿h2 {
+﻿* {
+    font-family: sans-serif;
+}
+
+h2 {
     text-align: center;
     color: purple;
     font-family: sans-serif;
@@ -13,11 +17,33 @@ body {
     background-color: black;
 }
 
+/*start header*/
+a[id="sign-in"] {
+    color: white;
+    padding: 10px 15px 10px 15px;
+    margin-left: 30px;
+    border: 1px solid;
+    border-color: white;
+    background-color: black;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    position: relative;
+    z-index: ;
+}
+
+a[id="sign-in"]:hover{
+    background-color: mediumorchid;
+}
+
 img[alt="logo"] {
-    display: block;
+    display: block; 
     width: 400px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: -1;
 }
 
 .nav {
@@ -48,7 +74,6 @@ img[alt="logo"] {
     height: 3em;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: sans-serif;
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 3em;
@@ -95,10 +120,10 @@ img[alt="logo"] {
 .tab span:nth-child(4) {
     --n: 4;
 }
-
+/*end header*/
 
 .add-ticket {
-    width: 800px;
+    width: 900px;
     box-shadow: 0 4px 8px 0 purple;
     border-color: purple;
     padding: 20px;
@@ -107,13 +132,19 @@ img[alt="logo"] {
 }
 
 p[id="requiredField"] {
-    color: red;
-    font-family: sans-serif;
+    color: #E64E4E;
+}
+
+p[id="req"] {
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    color: #E64E4E;
 }
 
 label {
     padding-right: 3px;
-    font-family: sans-serif;
+    font-size: 20px;
     font-weight: bold;
     color: purple;
 }
@@ -134,9 +165,26 @@ textarea {
     background-color: black;
     margin-bottom: 50px;
     color: white;
+    width:100%;
 }
 
-@media only screen and (max-width: 800px){
+button {
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 0.5em;
+    padding: 10px 15px 10px 15px;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: mediumorchid;
+}
+
+@media only screen and (max-width: 900px){
     label[for="category"]::before {
         content: "\a";
         white-space: pre;
@@ -196,7 +244,6 @@ textarea {
         height: 3em;
         text-transform: uppercase;
         font-weight: bold;
-        font-family: sans-serif;
         letter-spacing: 0.1em;
         text-align: center;
         line-height: 3em;
