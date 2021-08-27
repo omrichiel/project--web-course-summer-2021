@@ -12,23 +12,70 @@ body {
 }
 
 /*start headr*/
+.top-line {
+    display: grid;
+    grid-template-columns: 200px 900px auto;
+}
+
+.sign-in {
+    display: inline;
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
 a[id="sign-in"] {
     color: white;
+    background-color: black;
     padding: 10px 15px 10px 15px;
     margin-left: 30px;
-    border: 1px solid;
+    border: 2px solid;
     border-color: white;
-    background-color: black;
     letter-spacing: 0.1em;
     font-size: 20px;
     border-radius: 0.5em;
     cursor: pointer;
-    position: relative;
-    z-index: ;
 }
 
-a[id="sign-in"]:hover{
+a[id="sign-in"]:hover {
     background-color: mediumorchid;
+}
+
+.scroll-left {
+    display: inline;
+    background-color: black;
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+a[id="scroll-left"] {
+    position: absolute;
+    color: white;
+    margin-right: 0;
+    /* Apply animation to this element */
+    animation: scroll-left 5s linear infinite;
+}
+
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    from {
+        transform: translateX(900px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+.black {
+    display: inline;
+    background-color: black;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    z-index: 1;
 }
 
 img[alt="logo"] {
@@ -120,17 +167,18 @@ img[alt="logo"] {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 
-.card {
-    display: inline-block;
+.filterDiv {
     justify-content: space-evenly;
     box-shadow: 0 4px 8px 0 purple;
     width: 300px;
     text-align: center;
     color: white;
     margin: 30px 0 30px 60px;
+    display: none;
 }
 
 .price {
@@ -138,7 +186,7 @@ img[alt="logo"] {
     font-size: 22px;
 }
 
-.card button {
+.filterDiv button {
     border: none;
     outline: 0;
     padding: 12px;
@@ -154,25 +202,9 @@ img[alt="logo"] {
     opacity: 0.7;
 }
 
-
-.container {
-    overflow: hidden;
-}
-
-.filterDiv {
-    float: left;
-    background-color: #2196F3;
-    color: #ffffff;
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    margin: 2px;
-    display: none; /* Hidden by default */
-}
-
 /* The "show" class is added to the filtered elements */
 .show {
-    display: block;
+    display: inline-block;
 }
 
 .myBtnContainer {
@@ -190,6 +222,7 @@ img[alt="logo"] {
     padding: 12px 16px;
     background-color: black;
     cursor: pointer;
+    text-align: center;
 }
 
 /* Add a light grey background on mouse-over */
@@ -203,11 +236,7 @@ img[alt="logo"] {
     color: white;
 }
 
-.btn[onclick="filterSelection('all')"] {
-     font-weight: bold;
-     color: black;
-     background-color: lightgray;
-}
+
 
 .datetime {
     display: inline;

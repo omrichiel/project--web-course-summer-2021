@@ -5,12 +5,21 @@
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>Tickets</title>
         <link rel="stylesheet" href="tickets.css">
+        <script src="tickets.js"></script>
     </head>
 
-    <body>
+    <body onload="filterSelection('all')">
         <!--start header-->
         <br /><br />
-        <a id="sign-in">Sign In</a>
+        <div class="top-line">
+            <div class="sign-in">
+                <a id="sign-in">Sign In</a>
+            </div>
+            <div class="scroll-left">
+                <a id="scroll-left"> WELLCOME TO TICKETME! </a>
+            </div>
+            <div class="black"></div>
+        </div>
         <img src="logo.jpeg" alt="logo">
         <br>
         <table class="nav">
@@ -45,34 +54,21 @@
         <!--end header-->
 
         <div class="myBtnContainer">
-            <button class="btn" onclick="filterSelection('all')"> Show all </button>
-            <button class="btn" onclick="filterSelection('Concerts')"> Concerts </button>
-            <button class="btn" onclick="filterSelection('Sports')"> Sports </button>
-            <button class="btn" onclick="filterSelection('Stand Up Comedy')"> Stand Up Comedy </button>
-            <button class="btn" onclick="filterSelection('Parties')"> Parties </button>
-            <button class="btn" onclick="filterSelection('Festivals')"> Festivals </button>
-            <button class="btn" onclick="filterSelection('Theater')"> Theater </button>
-            <button class="btn" onclick="filterSelection('Cinema')"> Cinema </button>
-            <button class="btn" onclick="filterSelection('Partys')"> Other </button>
+            <button class="btn" id="all" onclick="filterSelection('all')"> Show all </button>
+            <button class="btn" id="concerts" onclick="filterSelection('concerts')"> Concerts </button>
+            <button class="btn" id="sports" onclick="filterSelection('sports')"> Sports </button>
+            <button class="btn" id="standup" onclick="filterSelection('standup')"> Stand Up Comedy </button>
+            <button class="btn" id="parties" onclick="filterSelection('parties')"> Parties </button>
+            <button class="btn" id="festivals" onclick="filterSelection('festivals')"> Festivals </button>
+            <button class="btn" id="theater" onclick="filterSelection('theater')"> Theater </button>
+            <button class="btn" id="cinema" onclick="filterSelection('cinema')"> Cinema </button>
+            <button class="btn" id="other" onclick="filterSelection('other')"> Other </button>
         </div>
         <br /><br />
 
-        <div class="container">
-            <div class="filterDiv Concerts ">Rock Shows </div>
-            <div class="filterDiv Sports">Soccer </div>
-            <div class="filterDiv Concerts ">MainStream </div>
-            <div class="filterDiv Sports">BasketBall </div>
-            <div class="filterDiv Concerts">Yam Tichoni </div>
-            <div class="filterDiv Sports">FootBall </div>
-            <div class="filterDiv Partys">MainStream </div>
-            <div class="filterDiv Partys">Trance </div>
-            <div class="filterDiv Partys">Techno </div>
-            <div class="filterDiv Partys">Yam Tichoni </div>
-        </div>
-
         <div class="tickets">
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv concerts">
+                <h2 style="color:white;">Omer Adam</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -84,8 +80,8 @@
                 <img src="man1.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv sports">
+                <h2 style="color:white;">Super Classico</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -97,8 +93,8 @@
                 <img src="man2.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv cinema">
+                <h2 style="color:white;">Harry Potter</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -110,8 +106,8 @@
                 <img src="man3.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv sports">
+                <h2 style="color:white;">Derby Hapoel Haifa VS maccabi Haifa</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -123,8 +119,8 @@
                 <img src="man1.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv concerts">
+                <h2 style="color:white;">Red Hot Chilli Peppers</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -136,8 +132,8 @@
                 <img src="man2.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv festivals">
+                <h2 style="color:white;">Burning Man</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -149,8 +145,8 @@
                 <img src="man3.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv parties">
+                <h2 style="color:white;">Funjoya</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -162,8 +158,8 @@
                 <img src="man1.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv standup">
+                <h2 style="color:white;">Shahar Hason</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -175,8 +171,8 @@
                 <img src="man2.jpg" alt=" profile picture" style="width:100%">
                 <p><button>Seller Details </button></p>
             </div>
-            <div class="card">
-                <h2 style="color:white;">Event Name</h2>
+            <div class="filterDiv concerts">
+                <h2 style="color:white;">Yuval Dayan</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
