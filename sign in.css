@@ -1,4 +1,4 @@
-﻿* {
+* {
     font-family: sans-serif;
 }
 
@@ -12,6 +12,10 @@ body {
 }
 
 /*start headr*/
+.top-line {
+    display: grid;
+    grid-template-columns: 200px 900px auto;
+}
 
 .sign-in {
     display: inline;
@@ -37,6 +41,41 @@ a[id="sign-in"] {
 
 a[id="sign-in"]:hover {
     background-color: mediumorchid;
+}
+
+.scroll-left {
+    display: inline;
+    background-color: black;
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+a[id="scroll-left"] {
+    position: absolute;
+    color: white;
+    margin-right: 0;
+    /* Apply animation to this element */
+    animation: scroll-left 5s linear infinite;
+}
+
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    from {
+        transform: translateX(900px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+.black {
+    display: inline;
+    background-color: black;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    z-index: 1;
 }
 
 img[alt="logo"] {
@@ -122,121 +161,62 @@ img[alt="logo"] {
 }
 /*end header*/
 
-.tickets {
-    display: table;
-    justify-content: space-evenly;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+h2 {
+    text-align: center;
+    color: purple;
 }
 
-
-.filterDiv {
-    justify-content: space-evenly;
+p[id="requiredField"] {
+    color: #E64E4E;
+}
+.signIn {
+    width: 500px;
     box-shadow: 0 4px 8px 0 purple;
-    width: 300px;
-    text-align: center;
-    color: white;
-    margin: 30px 0 30px 60px;
-    display: none;
-}
-
-.price {
-    color: grey;
-    font-size: 22px;
-}
-
-.filterDiv button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.card button:hover {
-    opacity: 0.7;
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-    display: inline-block;
-}
-
-.myBtnContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto;
-    width:90%;
-    margin-right: auto;
+    border-color: purple;
+    padding: 50px;
     margin-left: auto;
+    margin-right: auto;
 }
 
-/* Style the buttons */
-.btn {
-    color: mediumorchid;
-    border: none;
-    padding: 12px 16px;
+label {
+    padding-right: 3px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: purple;
+}
+
+input {
+    border: 2px solid;
+    border-color: black;
+    border-bottom-color: purple;
     background-color: black;
-    cursor: pointer;
-    text-align: center;
-}
-
-/* Add a light grey background on mouse-over */
-.btn:hover {
-    background-color: mediumorchid;
-    color: black;
-}
-
-/* Add a dark background to the active button */
-.btn.active {
     color: white;
+    margin-right: 30px;
+    margin-bottom: 50px;
 }
 
-
-
-.datetime {
-    display: inline;
-    grid-auto-columns: auto auto;
-    width:100%;
-    margin-right: auto;
-    margin-left: auto;
+.signUpLink{
+    color: white;
+    font-size: 16px; 
+    letter-spacing: 0.1em;
+}
+.signUpLink:hover{
+    color: mediumorchid;
 }
 
-.date {
-    display:inline;
-    padding-right:50px;
+button {
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 0.5em;
+    padding: 10px 15px 10px 15px;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
 }
 
-.time {
-    display: inline;
-    padding-left: 50px;
-}
-
-
-@media only screen and (max-width: 700px) {
-    .tab {
-        --c: White;
-        color: purple;
-        font-size: 12px;
-        font-display: initial;
-        border: 0.3em solid var(--c);
-        border-radius: 0.5em;
-        width: 100%;
-        height: 3em;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-        text-align: center;
-        line-height: 3em;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        transition: 0.5s;
-        cursor: pointer;
-    }
+button:hover {
+    background-color: mediumpurple;
 }

@@ -5,7 +5,6 @@
 h2 {
     text-align: center;
     color: purple;
-    font-family: sans-serif;
 }
 
 body {
@@ -18,11 +17,6 @@ body {
 }
 
 /*start headr*/
-.top-line {
-    display: grid;
-    grid-template-columns: 200px 900px auto;
-}
-
 .sign-in {
     display: inline;
     position: relative;
@@ -49,44 +43,9 @@ a[id="sign-in"]:hover {
     background-color: mediumorchid;
 }
 
-.scroll-left {
-    display: inline;
-    background-color: black;
-    overflow: hidden;
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
-a[id="scroll-left"] {
-    position: absolute;
-    color: white;
-    margin-right: 0;
-    /* Apply animation to this element */
-    animation: scroll-left 5s linear infinite;
-}
-
-/* Move it (define the animation) */
-@keyframes scroll-left {
-    from {
-        transform: translateX(900px);
-    }
-
-    to {
-        transform: translateX(-300px);
-    }
-}
-
-.black {
-    display: inline;
-    background-color: black;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    z-index: 1;
-}
-
 img[alt="logo"] {
     display: block;
-    width: 400px;
+    width: 230px;
     margin-left: auto;
     margin-right: auto;
 }
