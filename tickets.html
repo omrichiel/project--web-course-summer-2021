@@ -4,8 +4,8 @@
     <head>
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>Tickets</title>
-        <link rel="stylesheet" href="tickets.css">
         <script src="tickets.js"></script>
+        <link rel="stylesheet" href="tickets.css">
     </head>
 
     <body onload="filterSelection('all')">
@@ -19,7 +19,7 @@
         <table class="nav">
             <tr>
                 <td id="firstTab">
-                    <div class="tab" onclick="location.href='home page.html'">
+                    <div class="tab" onclick="location.href='homePage.html'">
                         Home
                         <span></span><span></span><span></span><span></span>
                     </div>
@@ -56,13 +56,21 @@
             <button class="btn" id="festivals" onclick="filterSelection('festivals')"> Festivals </button>
             <button class="btn" id="theater" onclick="filterSelection('theater')"> Theater </button>
             <button class="btn" id="cinema" onclick="filterSelection('cinema')"> Cinema </button>
+            <button class="btn" id="kids-shows" onclick="filterSelection('kids-shows')"> Kid's shows </button>
             <button class="btn" id="other" onclick="filterSelection('other')"> Other </button>
         </div>
         <br /><br />
+        
+        <form action="" onsubmit="return false" class="searchBar">
+            <input type="text" id="search" placeholder="Search ticket">
+        </form>
+        <br>
 
-        <div class="tickets">
-            <div class="filterDiv concerts">
-                <h2 style="color:white;">Omer Adam</h2>
+        <h1 id="showCtegory"></h1>
+
+        <ul class="tickets" id="tickets">
+            <li class="filterDiv concerts" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Omer Adam</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -70,12 +78,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man1.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv sports">
-                <h2 style="color:white;">Super Classico</h2>
+            </li>
+            <li class="filterDiv sports" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Super Classico</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -83,12 +88,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man2.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv cinema">
-                <h2 style="color:white;">Harry Potter</h2>
+            </li>
+            <li class="filterDiv cinema" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Harry Potter</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -96,12 +98,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man3.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv sports">
-                <h2 style="color:white;">Derby Hapoel Haifa VS maccabi Haifa</h2>
+            </li>
+            <li class="filterDiv sports" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Derby Hapoel Haifa VS maccabi Haifa</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -109,12 +108,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man1.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv concerts">
-                <h2 style="color:white;">Red Hot Chilli Peppers</h2>
+            </li>
+            <li class="filterDiv concerts" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Red Hot Chilli Peppers</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -122,12 +118,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man2.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv festivals">
-                <h2 style="color:white;">Burning Man</h2>
+            </li>
+            <li class="filterDiv festivals" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Burning Man</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -135,12 +128,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man3.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv parties">
-                <h2 style="color:white;">Funjoya</h2>
+            </li>
+            <li class="filterDiv parties" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Funjoya</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -148,12 +138,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man1.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv standup">
-                <h2 style="color:white;">Shahar Hason</h2>
+            </li>
+            <li class="filterDiv standup" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Shahar Hason</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -161,12 +148,9 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man2.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-            <div class="filterDiv concerts">
-                <h2 style="color:white;">Yuval Dayan</h2>
+            </li>
+            <li class="filterDiv concerts" onclick="location.href='ticket page.html'">
+                <h2 href="#" class="eventName">Yuval Dayan</h2>
                 <p class="place">Place Name</p>
                 <p class="address">Address</p>
                 <p class="price">$19.99</p>
@@ -174,11 +158,29 @@
                     <p class="date">dd/mm/yyyy</p>
                     <p class="time">00:00</p>
                 </div>
-                <br /><br />
-                <img src="man3.jpg" alt=" profile picture" style="width:100%">
-                <p><button>Seller Details </button></p>
-            </div>
-        </div>
+            </li>
+        </ul>
         <br /><br /><br />
+
+        <script>
+            //search bar
+            let searchInput = document.getElementById('search');
+            searchInput.addEventListener('keyup', filterNames);
+
+            function filterNames() {
+                let searchValue = document.getElementById('search').value.toUpperCase();
+                let ul = document.getElementById('tickets');
+                let li = ul.querySelectorAll('li.filterDiv');
+
+                for (let i = 0; i < li.length; i++) {
+                    let eventName = li[i].getElementsByTagName('h2')[0];
+                    if (eventName.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
+                        li[i].style.display = 'inline-block';
+                    } else {
+                        li[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
     </body>
 </html>

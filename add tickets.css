@@ -29,12 +29,12 @@ body {
 a[id="sign-in"] {
     color: white;
     background-color: black;
-    padding: 10px 15px 10px 15px;
+    padding: 5px 10px 5px 10px;
     margin-left: 30px;
     border: 2px solid;
     border-color: white;
     letter-spacing: 0.1em;
-    font-size: 20px;
+    font-size: 12px;
     border-radius: 0.5em;
     cursor: pointer;
 }
@@ -84,7 +84,6 @@ img[alt="logo"] {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    transition: 0.5s;
     cursor: pointer;
 }
 
@@ -148,9 +147,9 @@ p[id="req"] {
 
 label {
     padding-right: 3px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: purple;
+    color: white;
 }
 
 input, select {
@@ -189,23 +188,11 @@ button:hover {
 }
 
 @media only screen and (max-width: 900px){
-    label[for="category"]::before {
+    p[id="req"]::before {
         content: "\a";
         white-space: pre;
     }
     label[for="openGatesTime"]::before {
-        content: "\a";
-        white-space: pre;
-    }
-    label[for="startTime"]::before {
-        content: "\a";
-        white-space: pre;
-    }
-    label[for="endTime"]::before {
-        content: "\a";
-        white-space: pre;
-    }
-    label[for="address"]::before {
         content: "\a";
         white-space: pre;
     }
@@ -214,14 +201,6 @@ button:hover {
         white-space: pre;
     }
     label[for="area"]::before {
-        content: "\a";
-        white-space: pre;
-    }
-    label[for="salePrice"]::before {
-        content: "\a";
-        white-space: pre;
-    }
-    label[for="quantity"]::before {
         content: "\a";
         white-space: pre;
     }

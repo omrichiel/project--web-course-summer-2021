@@ -10,7 +10,6 @@ body {
     justify-content: center;
     background-color: black;
 }
-
 /*start headr*/
 
 .sign-in {
@@ -25,12 +24,12 @@ body {
 a[id="sign-in"] {
     color: white;
     background-color: black;
-    padding: 10px 15px 10px 15px;
+    padding: 5px 10px 5px 10px;
     margin-left: 30px;
     border: 2px solid;
     border-color: white;
     letter-spacing: 0.1em;
-    font-size: 20px;
+    font-size: 12px;
     border-radius: 0.5em;
     cursor: pointer;
 }
@@ -140,6 +139,8 @@ img[alt="logo"] {
     color: white;
     margin: 30px 0 30px 60px;
     display: none;
+    padding-bottom: 30px;
+    cursor: pointer;
 }
 
 .price {
@@ -147,20 +148,8 @@ img[alt="logo"] {
     font-size: 22px;
 }
 
-.filterDiv button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.card button:hover {
-    opacity: 0.7;
+.filterDiv:hover {
+    filter: brightness(200%);
 }
 
 /* The "show" class is added to the filtered elements */
@@ -170,10 +159,11 @@ img[alt="logo"] {
 
 .myBtnContainer {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
     width:90%;
     margin-right: auto;
     margin-left: auto;
+    
 }
 
 /* Style the buttons */
@@ -188,16 +178,19 @@ img[alt="logo"] {
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-    background-color: mediumorchid;
     color: black;
+    background-color: mediumorchid;
 }
 
 /* Add a dark background to the active button */
-.btn.active {
+.btn:active {
     color: white;
 }
 
-
+.btn.active:hover {
+    color: black;
+    font-weight: bold;  
+}
 
 .datetime {
     display: inline;
@@ -217,6 +210,10 @@ img[alt="logo"] {
     padding-left: 50px;
 }
 
+.eventName {
+    color: white;
+    height: 80px;
+}
 
 @media only screen and (max-width: 700px) {
     .tab {
@@ -239,4 +236,14 @@ img[alt="logo"] {
         transition: 0.5s;
         cursor: pointer;
     }
+}
+
+.searchBar {
+    text-align: center;
+}
+
+.searchBar input {
+    border-radius: 5px;
+    width: 500px;
+    height: 25px;
 }

@@ -10,84 +10,49 @@ body {
     background-color: black;
 }
 
-/*start headr*/
 .top-line {
     display: grid;
     grid-template-columns: 200px 900px auto;
 }
 
+/*start header*/
 .sign-in {
-    display: inline;
-    position: relative;
-    z-index: 1;
-    background-color: black;
-    grid-column-start: 1;
-    grid-column-end: 1;
+display: inline;
+position: relative;
+z-index: 1;
+background-color: black;
+grid-column-start: 1;
+grid-column-end: 1;
 }
 
 a[id="sign-in"] {
-    color: white;
-    background-color: black;
-    padding: 10px 15px 10px 15px;
-    margin-left: 30px;
-    border: 2px solid;
-    border-color: white;
-    letter-spacing: 0.1em;
-    font-size: 12px;
-    border-radius: 0.5em;
-    cursor: pointer;
+color: white;
+background-color: black;
+padding: 5px 10px 5px 10px;
+margin-left: 30px;
+border: 2px solid;
+border-color: white;
+letter-spacing: 0.1em;
+font-size: 12px;
+border-radius: 0.5em;
+cursor: pointer;
 }
 
 a[id="sign-in"]:hover {
     background-color: mediumorchid;
 }
 
-.scroll-left {
-    display: inline;
-    background-color: black;
-    overflow: hidden;
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
-a[id="scroll-left"] {
-    position: absolute;
-    color: white;
-    margin-right: 0;
-    /* Apply animation to this element */
-    animation: scroll-left 5s linear infinite;
-}
-
-/* Move it (define the animation) */
-@keyframes scroll-left {
-    from {
-        transform: translateX(900px);
-    }
-
-    to {
-        transform: translateX(-300px);
-    }
-}
-
-.black {
-    display: inline;
-    background-color: black;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    z-index: 1;
-}
-
 img[alt="logo"] {
-    display: block;
-    width: 230px;
-    margin-left: auto;
-    margin-right: auto;
+display: block;
+width: 230px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .nav {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+margin-left: auto;
+margin-right: auto;
+width: 90%;
 }
 
 .nav tr td {
@@ -118,7 +83,6 @@ img[alt="logo"] {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    transition: 0.5s;
     cursor: pointer;
 }
 
@@ -158,44 +122,51 @@ img[alt="logo"] {
 .tab span:nth-child(4) {
     --n: 4;
 }
+
+.scroll-left {
+    display: inline;
+    background-color: black;
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+a[id="scroll-left"] {
+    position: absolute;
+    color: white;
+    margin-right: 0;
+    /* Apply animation to this element */
+    animation: scroll-left 5s linear infinite;
+}
+
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    from {
+        transform: translateX(900px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+.black {
+    display: inline;
+    background-color: black;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    z-index: 1;
+}
+
 /*end header*/
 
 h1 {
-    color: black;
+    color: antiquewhite;
     text-align: center;
     font-size: 30px;
 }
 
-.myBtnContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto;
-    width:90%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-/* Style the buttons */
-.btn {
-    color: mediumorchid;
-    border: none;
-    padding: 12px 16px;
-    background-color: black;
-    cursor: pointer;
-    text-align: center;
-}
-
-/* Add a light grey background on mouse-over */
-.btn:hover {
-    background-color: mediumorchid;
-    color: black;
-}
-
-/* Add a dark background to the active button */
-.btn.active {
-    color: white;
-}
-
-/**/
+/*
 .grid-up div{ 
     width: 300px;
     height: 100px;
@@ -222,82 +193,32 @@ h1 {
 
 .logo{
     grid-area: Logo1;
- }
+ }*/
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+.todayEvents {
+    display: table;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
 
-    nav ul li {
-        display: inline-table;
-        --c: White;
-        color: purple;
-        font-size: 16px;
-        border: 0.3em solid var(--c);
-        border-radius: 0.5em;
-        width: 22%;
-        height: 3em;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-family: sans-serif;
-        letter-spacing: 0.1em;
-        text-align: center;
-        line-height: 3em;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        transition: 0.5s;
-        margin: 1em;
-    }
-
-        nav ul li span {
-            position: absolute;
-            width:25%;
-            height: 100%;
-            background-color: mediumorchid;
-            transform: translateY(150%);
-            border-radius: 50%;
-            left: calc((var(--n) - 1) * 25%);
-            transition: 0.5s;
-            transition-delay: calc((var(--n) - 1) * 0.1s);
-            z-index: -1;
-        }
-
-        nav ul li:hover {
-            color: black;
-        }
-
-            nav ul li:hover span {
-                transform: translateY(0) scale(2);
-            }
-
-        nav ul li span:nth-child(1) {
-            --n: 1;
-        }
-
-        nav ul li span:nth-child(2) {
-            --n: 2;
-        }
-
-        nav ul li span:nth-child(3) {
-            --n: 3;
-        }
-
-        nav ul li span:nth-child(4) {
-            --n: 4;
-        }
-
-.card {
-    display: inline-block;
-    grid-area: C1 ;
-    box-shadow: 0 4px 8px 0 purple  ;
+.filterDiv {
+    justify-content: space-evenly;
+    box-shadow: 0 4px 8px 0 purple;
     width: 300px;
-    margin: 30px 30px 30px 30px;
     text-align: center;
-    font-family: arial;
-    color:white
+    color: white;
+    margin: 30px 0 30px 60px;
+    display: inline-block;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.filterDiv:hover {
+    filter: brightness(200%);
 }
 
 .price {
@@ -305,37 +226,131 @@ nav ul {
     font-size: 22px;
 }
 
-.card button {
+.filterDiv button {
     border: none;
     outline: 0;
     padding: 12px;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
 }
-    .card button:hover {
-        opacity: 0.7;
+
+.filterDiv button:hover {
+    opacity: 0.7;
+}
+
+.datetime {
+    display: inline;
+    grid-auto-columns: auto auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.date {
+    display: inline;
+    padding-right: 50px;
+}
+
+.time {
+    display: inline;
+    padding-left: 50px;
+}
+
+.eventName {
+    color: white;
+    height: 80px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
     }
 
-.searchBar {
-    text-align: center;
-}
-input[type="text"]{
-    border-radius: 5px;
-    width: 40%;
-    height: 25px;
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+    }
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-.filterDiv {
-    float: left;
-    background-color: #2196F3;
-    color: #ffffff;
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    margin: 2px;
-    display: none; /* Hidden by default */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    display: none;
+}
+
+.wellcome {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    border: 3px solid;
+    border-radius: 20px;
+    border-color: purple;
+    display: grid;
+    text-align: center;
+}
+
+.wellcome h1 {
+    color: black;
+}
+

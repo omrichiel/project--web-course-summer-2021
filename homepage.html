@@ -3,100 +3,217 @@
 <html>
     <head>
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>Ticket-Viewing </title>
+        <title>Home page </title>
         <link rel="stylesheet" href="homePage.css">
+        <!--  <script src="homePage.js"></script>   -->
 
     </head>
     <body>
-         <!--start header-->
-         <br /><br />
-         <div class="top-line">
-             <div class="sign-in">
-                 <a id="sign-in">Sign In</a>
-             </div>
-             <div class="scroll-left">
-                 <a id="scroll-left"> WELLCOME TO TICKETME! </a>
-             </div>
-             <div class="black"></div>
-         </div>
-         <img src="logo.jpeg" alt="logo">
-         <br>
-         <table class="nav">
-             <tr>
-                 <td id="firstTab">
-                     <div class="tab" onclick="location.href='home page.html'">
-                         Home
-                         <span></span><span></span><span></span><span></span>
-                     </div>
-                 </td>
-                 <td>
-                     <div class="tab" onclick="location.href='tickets.html'">
-                         Find Tickets
-                         <span></span><span></span><span></span><span></span>
-                     </div>
-                 </td>
-                 <td>
-                     <div class="tab" onclick="location.href='my profile.html'">
-                         My Profile
-                         <span></span><span></span><span></span><span></span>
-                     </div>
-                 </td>
-                 <td>
-                     <div class="tab" onclick="location.href='Contact page.html'">
-                         Contact Us
-                         <span></span><span></span><span></span><span></span>
-                     </div>
-                 </td>
-             </tr>
-         </table>
-         <br /><br />
-         <!--end header-->
-        
-
-        <div id="myBtnContainer">
-            <button class="btn active" id="all" onclick="filterSelection('all')"> Show all</button>
-            <button class="btn" id="concerts" onclick="filterSelection('Concerts')"> Concerts </button>
-            <button class="btn" id="sports" onclick="filterSelection('Sports')"> Sports </button>
-            <button class="btn" id="standup" onclick="filterSelection('StandUp Comedy')"> Stand Up Comedy </button>
-            <button class="btn" id="parties" onclick="filterSelection('Partys')"> Parties </button>
-            <button class="btn" id="festivals" onclick="filterSelection('festivals')"> Festivals </button>
-            <button class="btn" id="theater" onclick="filterSelection('theater')"> Theater </button>
-            <button class="btn" id="cinema" onclick="filterSelection('cinema')"> Cinema </button>
-            <button class="btn" id="other" onclick="filterSelection('other')"> Other </button>
+        <!--start header-->
+        <br /><br />
+        <div class="top-line">
+            <div class="sign-in">
+                <a id="sign-in">Sign In</a>
+            </div>
+            <div class="scroll-left">
+                <a id="scroll-left"> WELLCOME TO TICKETME ! </a>
+            </div>
+            <div class="black"></div>
         </div>
-        <br/><br/>
+        <img src="logo.jpeg" alt="logo">
+        <br>
+        <table class="nav">
+            <tr>
+                <td id="firstTab">
+                    <div class="tab" onclick="location.href='homePage.html'">
+                        Home
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='tickets.html'">
+                        Find Tickets
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='my profile.html'">
+                        My Profile
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='Contact page.html'">
+                        Contact Us
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br /><br />
+        <!--end header-->
 
-<div class="searchBar">
-    <input type="text" placeholder="Search Ticket">
-  </div>
-  <br>
+        <div class="popup">
+            <div class="wellcome" onclick="closePopup()">
+                <h1>Welcome To TicketMe!</h1>
+                <br /><br />
+                <h3>Here you can sell and buy second hand tickets for any event.</h3>
+                <br />
+                <h3>We hope you will be find your desire ticket.</h3>
+                <br /><br />
+                <p class="close">click anywhere for close this maessage</p>
+            </div>
+        </div>
 
-<h1 style="color: antiquewhite;">Last Minute Tickets</h1>
+        <script>
+            const popup = document.querySelector('.popup');
+            const close = document.querySelector('.close');
 
-<div class="lastMinute">
-        <div class="card">
-<h1 style="color:white;">Ticket </h1>
-  <p class="price">$19.99</p>
-  <p>Some text about the ticket..</p>
-            <img src="man1.jpg" alt=" profile picture" style="width:100%">
-  <p><button>Seller Details </button></p>
-</div>
-                <div class="card">
-<h1 style="color:white;">Ticket </h1>
-  <p class="price2">$19.99</p>
-  <p>Some text about the ticket..</p>
-            <img src="man2.jpg" alt=" profile picture" style="width:100%">
-  <p><button>Seller Details </button></p>
-</div>
-                <div class="card">
-<h1 style="color:white;">Ticket </h1>
-  <p class="price3">$19.99</p>
-  <p>Some text about the ticket..</p>
-            <img src="man3.jpg" alt=" profile picture" style="width:100%">
-  <p><button>Seller Details </button></p>
-</div>
+            window.onload = function () {
+                setTimeout(function () {
+                    popup.style.display = "block"
+                }, 2000)
+            }
 
-<h1 style="color: antiquewhite;">Last Updates</h1>
-      
+            function closePopup() {
+                document.querySelector('.popup').style.display = 'none';
+            }
+        </script>
+
+        <h1>Today Events</h1>
+        <ul class="todayEvents" id="todayEvents">
+            <li class="filterDiv concerts">
+                <h2 href="#" class="eventName">Omer Adam</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv sports">
+                <h2 href="#" class="eventName">Super Classico</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv cinema">
+                <h2 href="#" class="eventName">Harry Potter</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+        </ul>
+
+        <h1>This Week Events</h1>
+        <ul class="todayEvents" id="todayEvents">
+            <li class="filterDiv concerts">
+                <h2 href="#" class="eventName">Omer Adam</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv sports">
+                <h2 href="#" class="eventName">Super Classico</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv cinema">
+                <h2 href="#" class="eventName">Harry Potter</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+        </ul>
+
+        <h1>Last Uploads</h1>
+        <ul class="todayEvents" id="todayEvents">
+            <li class="filterDiv concerts">
+                <h2 href="#" class="eventName">Omer Adam</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv sports">
+                <h2 href="#" class="eventName">Super Classico</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv cinema">
+                <h2 href="#" class="eventName">Harry Potter</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+        </ul>
+
+        <h1>Discount Tickets</h1>
+        <ul class="todayEvents" id="todayEvents">
+            <li class="filterDiv concerts">
+                <h2 href="#" class="eventName">Omer Adam</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv sports">
+                <h2 href="#" class="eventName">Super Classico</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+            <li class="filterDiv cinema">
+                <h2 href="#" class="eventName">Harry Potter</h2>
+                <p class="place">Place Name</p>
+                <p class="address">Address</p>
+                <p class="price">$19.99</p>
+                <div class="datetime">
+                    <p class="date">dd/mm/yyyy</p>
+                    <p class="time">00:00</p>
+                </div>
+            </li>
+        </ul>
     </body>
 </html>

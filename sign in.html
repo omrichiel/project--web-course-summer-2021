@@ -1,10 +1,11 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
     <head>
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>sign in page</title>
         <link rel="stylesheet" href="sign in.css">
+        <script src="sign in.js"></script>
     </head>
 
     <body>
@@ -14,16 +15,13 @@
             <div class="sign-in">
                 <a id="sign-in">Sign In</a>
             </div>
-            <div class="scroll-left">
-                <a id="scroll-left"> WELLCOME TO TICKETME! </a>
-            </div>
         </div>
-        <img src="logo.png" alt="logo">
+        <img src="logo.jpeg" alt="logo">
         <br>
         <table class="nav">
             <tr>
                 <td id="firstTab">
-                    <div class="tab" onclick="location.href='home page.html'">
+                    <div class="tab" onclick="location.href='homePage.html'">
                         Home
                         <span></span><span></span><span></span><span></span>
                     </div>
@@ -59,7 +57,10 @@
                 <input type="text" id="userName" name="User name" required><br><br>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="Password" required> 
+                <input type="password" id="password" name="password" required>
+                <br />
+                <input type="checkbox" onclick="showPassword()">
+                <a id="showPassword">Show password</a>
 
                 <div class="signUpLink" onclick="location.href='registration.html' ">
                    To sign up... click here !  
@@ -69,5 +70,7 @@
                 <button type="submit" class="send">Log in</button>
 
             </div>
-        
-         </body>
+        </form>
+        <br /><br /><br />
+    </body>
+</html>
