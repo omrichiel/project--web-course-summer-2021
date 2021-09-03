@@ -70,12 +70,12 @@ img[alt="logo"] {
     border: 0.3em solid var(--c);
     border-radius: 0.5em;
     width: 100%;
-    height: 3em;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.1em;
     text-align: center;
-    line-height: 3em;
+    padding-top: 1em;
+    height: 2em;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -157,7 +157,7 @@ img[alt="logo"] {
     display: inline-block;
 }
 
-.myBtnContainer {
+div[id=myBtnContainer] {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
     width:90%;
@@ -183,14 +183,15 @@ img[alt="logo"] {
 }
 
 /* Add a dark background to the active button */
-.btn:active {
-    color: white;
+.btn.active {
+    color: black;
+    background-color: lightgrey;
 }
 
-.btn.active:hover {
+/*.btn.active:hover {
     color: black;
     font-weight: bold;  
-}
+}*/
 
 .datetime {
     display: inline;
@@ -215,35 +216,35 @@ img[alt="logo"] {
     height: 80px;
 }
 
-@media only screen and (max-width: 700px) {
-    .tab {
-        --c: White;
-        color: purple;
-        font-size: 12px;
-        font-display: initial;
-        border: 0.3em solid var(--c);
-        border-radius: 0.5em;
-        width: 100%;
-        height: 3em;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-        text-align: center;
-        line-height: 3em;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-}
-
 .searchBar {
     text-align: center;
+    line-height: normal;
 }
 
 .searchBar input {
     border-radius: 5px;
     width: 500px;
     height: 25px;
+}
+
+@media only screen and (max-width: 900px) {
+    div[id=myBtnContainer] {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .tab {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .searchBar input {
+        width: 71%;
+    }
 }
