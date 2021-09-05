@@ -48,13 +48,13 @@
         <!--end header-->
 
         <h2>Offer a New Ticket For Sale</h2>
-        <form id="add-ticket">
+        <form action="/todo" method="get" id="add-ticket">
             <div class="add-ticket">
                 <p id="requiredField">*  Required field</p>
                 <span>
                     <p id="req">*</p><label for="eventName">Event name:</label>
                     <input type="text" id="eventName" name="eventName" style="width: 50%" required>
-                    <p id="req">*</p><label for="category" style="">Category:</label>
+                    <p id="req">*</p><label for="category">Category:</label>
                     <select id="category" name="category" required>
                         <option value="other">other</option>
                         <option value="concerts">concerts</option>
@@ -92,20 +92,20 @@
                 <br />
                 <span>
                     <label for="row">Row:</label>
-                    <input type="number" id="row" name="row" style="width: 50px">
+                    <input type="number" id="row" name="row" style="width: 50px" min="0">
                     <label for="chair">Chair:</label>
-                    <input type="number" id="chair" name="chair" style="width: 50px">
+                    <input type="number" id="chair" name="chair" style="width: 50px" min="0">
                     <label for="area">Area:</label>
                     <input type="text" id="area" name="area">
                 </span>
                 <br />
                 <span>
                     <p id="req">*</p><label for="purchasePrice">Purchase price (per ticket):</label>
-                    <input type="text" id="purchasePrice" name="purchasePrice" style="width: 30px" required>
+                    <input type="text" id="purchasePrice" name="purchasePrice" style="width: 30px" min="0" required>
                     <p id="req">*</p><label for="salePrice">Sale price (per ticket):</label>
                     <input type="text" id="salePrice" name="salePrice" style="width: 30px" required>
                     <p id="req">*</p><label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" name="quantity" style="width: 30px" required>
+                    <input type="number" id="quantity" name="quantity" style="width: 30px" min="1" required>
                 </span>
                 <br />
                 <span>
@@ -123,7 +123,7 @@
                     <input type="file" id="attachment" name="attachment" style="cursor: pointer" multiple required>
                 </span>
                 <br />
-                <button type="submit">Upload</button>
+                <button type="submit" form="add-ticket">Upload</button>
             </div>
         </form>
         <br /><br /><br />

@@ -5,6 +5,7 @@
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>registration page</title>
         <link rel="stylesheet" href="registration.css">
+        <script src="registration.js"></script>
     </head>
 
     <body>
@@ -47,7 +48,7 @@
         <!--end header-->
 
         <h2 style="text-align: center">Sign Up</h2><br>
-        <form action="">
+        <form action="/todo" id="sign-up">
 
             <div class="signUp">
                 <label for="usertName">User name:</label>
@@ -70,37 +71,24 @@
 
                 <label for="preferences">What events do you like?</label>
                 <br />
-                <table class="prefTable">
-                    <tr>
-                        <td>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="concerts">concerts</a>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="sports">sports</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="standup">stand up comedy</a>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="parties">parties</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="festivals">festivals</a>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="theater">theater</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="cinema">cinema</a>
-                            <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="kids">kid's shows</a>
-                        </td>
-                    </tr>
-                </table>
+                <div class="prefDiv">
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="concerts">concerts</a>
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="sports">sports</a>
+                    <br />
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="standup">stand up comedy</a>
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="parties">parties</a>
+                    <br />
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="festivals">festivals</a>
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="theater">theater</a>
+                    <br />
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="cinema">cinema</a>
+                    <input type="checkbox" id="preferences" name="preferences"><a class="preferences" id="kids">kid's shows</a>
+                </div>
 
                 <label for="confirmation">Approval of terms of user</label>
                 <input type="checkbox" id="confirmation" name="Approval of terms of user" required><br><br>
 
-                <button type="submit" class="send">Submit</button>
+                <button type="submit" form="sign-up">Submit</button>
             </div>
         </form>
         <br /><br /><br />

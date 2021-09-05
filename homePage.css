@@ -17,12 +17,12 @@ body {
 
 /*start header*/
 .sign-in {
-display: inline;
-position: relative;
-z-index: 1;
-background-color: black;
-grid-column-start: 1;
-grid-column-end: 1;
+    display: inline;
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 1;
 }
 
 a[id="sign-in"] {
@@ -162,9 +162,9 @@ a[id="scroll-left"] {
 /*end header*/
 
 h1 {
-    color: antiquewhite;
-    text-align: center;
-    font-size: 30px;
+    color: purple;
+    text-align: left;
+    padding-left: 30px;
 }
 
 /*
@@ -197,13 +197,12 @@ h1 {
  }*/
 
 
-.todayEvents {
-    display: table;
-    justify-content: space-evenly;
+.filtered {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .filterDiv {
@@ -212,7 +211,7 @@ h1 {
     width: 300px;
     text-align: center;
     color: white;
-    margin: 30px 0 30px 60px;
+    margin: 0 30px 30px 0;
     display: inline-block;
     padding-bottom: 30px;
     cursor: pointer;
@@ -343,7 +342,7 @@ h1 {
     position: relative;
     width: 100%;
     height: 400px;
-    background-color: white;
+    background-color: lightgray;
     border: 3px solid;
     border-radius: 20px;
     border-color: purple;
@@ -355,3 +354,9 @@ h1 {
     color: black;
 }
 
+@media only screen and (max-width: 700px) {
+    .tab {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+}

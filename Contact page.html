@@ -47,36 +47,33 @@
         <!--end header-->
 
         <h2 style="text-align: center">Contact Us</h2>
-        <form id="contact-form">
+        <form action="/todo" id="contact-form">
             <div class="contact-form">
                 <p id="requiredField">*Fill all the fields</p><br /><br />
                 <div class="full_name">
                     <label for="full_name"> Full name: </label>
-                    <input type="text" id="full name" name="full name in sql table" required> <br> <br>
+                    <input type="text" id="full_name" name="full_name" required> <br> <br>
                 </div>
                 <div class="phone_num">
-                    <label for="phone number"> Phone number:</label>
-                    <input type="tel" id="phone number" name="phone number in sql table" required> <br> <br>
+                    <label for="phone_number"> Phone number:</label>
+                    <input type="tel" id="phone_number" name="phone_number" required> <br> <br>
                 </div>
                 <div class="E-mail">
                     <label for="E-mail"> E-mail:</label>
-                    <input type="email" id="E-mail" name="E-mail in sql table" style="width: 350px" required> <br> <br>
+                    <input type="email" id="E-mail" name="E-mail" style="width: 70%" required> <br> <br>
                 </div>
                 <div class="message">
-                    <label for="text"> Write your text below: </label> <br>
-                    <textarea name="YourRequests" id="YourRequests" rows="6" required> </textarea> <br>
+                    <label for="message"> Write your text below: </label> <br>
+                    <textarea name="message" id="message" rows="6" required> </textarea> <br>
                 </div>
-                <button type="submit">Submit</button>
-
-                <div class="whatsUp">
-
-                </div>
-                <div class="faceBook">
-
-                </div>
-
+                <button type="submit" form="contact-form">Submit</button>
             </div>
         </form>
+        <br>
+        <div class="socials">
+            <img src="instagram icon.svg" alt="Instagram icon" onclick="window.open('https://instagram.com','_blank')">
+            <img src="facebook icon.svg" alt="Facebook icon" onclick="window.open('https://facebook.com','_blank')">
+        </div>
         <br /><br /><br />
 
     </body>

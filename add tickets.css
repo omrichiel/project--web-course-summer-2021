@@ -222,3 +222,7 @@ button:hover {
         padding-bottom: 0.5em;
     }
 }
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

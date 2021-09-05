@@ -185,9 +185,32 @@ button:hover {
     background-color: mediumpurple;
 }
 
+.socials {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socials img {
+    width: 50px;
+    display: inline;
+    cursor: pointer;
+    padding: 0 2px 0 2px;
+}
+
+.socials img:hover {
+    filter: brightness(170%);
+}
+
 @media only screen and (max-width: 700px) {
     .tab {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .contact-form {
+        width: 80%;
     }
 }
