@@ -52,14 +52,14 @@
         <!--end header-->
 
         <div class="popup">
-            <div class="wellcome" onclick="closePopup()">
+            <div class="welcome">
                 <h1>Welcome To TicketMe!</h1>
                 <br /><br />
                 <h3>Here you can sell and buy second hand tickets for any event.</h3>
                 <br />
                 <h3>We hope you will be find your desire ticket.</h3>
                 <br /><br />
-                <p class="close">click anywhere for close this maessage</p>
+                <p class="close" onclick="closePopup()">Close message</p>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
             }
         </script>
 
-        <h1>Today Events</h1>
+        <h1 class="tickets">Today Events</h1>
         <ul class="filtered" id="todayEvents">
             <li class="filterDiv concerts">
                 <h2 href="#" class="eventName">Omer Adam</h2>
@@ -142,7 +142,7 @@
             </li>
         </ul>
 
-        <h1>This Week Events</h1>
+        <h1 class="tickets">This Week Events</h1>
         <ul class="filtered" id="todayEvents">
             <li class="filterDiv concerts">
                 <h2 href="#" class="eventName">Omer Adam</h2>
@@ -206,7 +206,7 @@
             </li>
         </ul>
 
-        <h1>Last Uploads</h1>
+        <h1 class="tickets">Last Uploads</h1>
         <ul class="filtered" id="todayEvents">
             <li class="filterDiv concerts">
                 <h2 href="#" class="eventName">Omer Adam</h2>
@@ -270,7 +270,7 @@
             </li>
         </ul>
 
-        <h1>Discount Tickets</h1>
+        <h1 class="tickets">Discount Tickets</h1>
         <ul class="filtered" id="todayEvents">
             <li class="filterDiv concerts">
                 <h2 href="#" class="eventName">Omer Adam</h2>
@@ -333,5 +333,26 @@
                 </div>
             </li>
         </ul>
+
+        <!--start footer-->
+        <table class="footer">
+            <tr>
+                <td>
+                    <a>About us</a>
+                </td>
+                <td>
+                    <a>FAQ</a>
+                </td>
+                <td>
+                    <a>Policy</a>
+                </td>
+                <td>
+                    <a>Follow us:</a><br>
+                    <img src="Instagram icon.svg" alt="Instagram" onclick="window.open('https://instagram.com','_blank')">
+                    <img src="facebook icon.svg" alt="Facebook" onclick="window.open('https://facebook.com','_blank')">
+                </td>
+            </tr>
+        </table>
+        <!--end footer-->
     </body>
 </html>
