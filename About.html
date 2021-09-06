@@ -3,18 +3,20 @@
 <html>
     <head>
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>sign in page</title>
-        <link rel="stylesheet" href="sign in.css">
-        <script src="sign in.js"></script>
+        <title>about as</title>
+        <link rel="stylesheet" href="About.css">
     </head>
-
     <body>
         <!--start header-->
         <br /><br />
         <div class="top-line">
-            <div class="sign-in">
+            <div class="sign-in" onclick="location.href='sign in.html'">
                 <a id="sign-in">Sign In</a>
             </div>
+            <div class="scroll-left">
+                <a id="scroll-left"> WELCOME TO TICKETME ! </a>
+            </div>
+            <div class="black"></div>
         </div>
         <img src="logo.jpeg" alt="logo">
         <br>
@@ -48,30 +50,18 @@
         </table>
         <br /><br />
         <!--end header-->
-
-        <h2 style="text-align: center">Sign In</h2><br>
-        <form action="/todo" id="sign-in">
-
-            <div class="signIn">
-                <label for="usertName">User name:</label>
-                <input type="text" id="userName" name="User name" required><br><br>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br />
-                <input type="checkbox" onclick="showPassword()">
-                <a id="showPassword">Show password</a>
-
-                <div class="signUpLink" onclick="location.href='registration.html' ">
-                   To sign up... click here !  
-                </div> 
-                <br><br>
-
-                <button type="submit" form="sign-in">Log in</button>
-
-            </div>
-        </form>
-        <br /><br /><br />
+        <div class="about">
+            <h1>About Us</h1>
+            <h4>For a project in Ben Gurion University we were asked to create a website.<br>
+                Our website will help people to buy and sell seceond hand ticket in better wat then exist today.<br>
+                The website is gives an option to upload ticket for many categories.<br>
+                We belive that is better solution for many pepole that buy ticket but cant use them for various reasone.<br>
+                Hope you enjoy and that our website halp you!<br></h4>
+        </div>
+            <br>
+            <br>
+            <br>
+        </h3>
 
         <!--start footer-->
         <table class="footer">
@@ -83,7 +73,7 @@
                     <a onclick="location.href='FAQ.html'">FAQ</a>
                 </td>
                 <td>
-                    <a onclick="location.href='policy.html">Policy</a>
+                    <a onclick="location.href='policy.html'">Policy</a>
                 </td>
                 <td>
                     <a>Follow us:</a><br>

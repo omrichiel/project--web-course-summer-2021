@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="tickets.css">
     </head>
 
-    <body onload="filterSelection('all')">
+    <body onload="search(), filterSelection('all')">
         <!--start header-->
         <br /><br />
         <div class="sign-in" onclick="location.href='sign in.html'">
@@ -62,9 +62,15 @@
         <br /><br />
         
         <form action="" onsubmit="return false" class="searchBar">
-            <input type="text" id="search" placeholder="Search ticket">
+            <input type="text" id="search" name="search_ticket" placeholder="Search ticket">
+            <select id="sort" name="sort_tickets">
+                <option value="sort">Sort</option>
+                <option value="alphabet" onclick="sortList()">alphabet</option>
+            </select>
         </form>
         <br>
+
+        <p onclick="sortList()" style="color: white; cursor: pointer">sort</p>
 
         <h1 id="showCtegory"></h1>
 
@@ -161,38 +167,17 @@
             </li>
         </ul>
 
-        <script>
-            //search bar
-            let searchInput = document.getElementById('search');
-            searchInput.addEventListener('keyup', filterNames);
-
-            function filterNames() {
-                let searchValue = document.getElementById('search').value.toUpperCase();
-                let ul = document.getElementById('tickets');
-                let li = ul.querySelectorAll('li.filterDiv');
-
-                for (let i = 0; i < li.length; i++) {
-                    let eventName = li[i].getElementsByTagName('h2')[0];
-                    if (eventName.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
-                        li[i].style.display = 'inline-block';
-                    } else {
-                        li[i].style.display = 'none';
-                    }
-                }
-            }
-        </script>
-
         <!--start footer-->
         <table class="footer">
             <tr>
                 <td>
-                    <a>About us</a>
+                    <a onclick="location.href='About.html'">About us</a>
                 </td>
                 <td>
-                    <a>FAQ</a>
+                    <a onclick="location.href='FAQ.html'">FAQ</a>
                 </td>
                 <td>
-                    <a>Policy</a>
+                    <a onclick="location.href='policy.html'">Policy</a>
                 </td>
                 <td>
                     <a>Follow us:</a><br>

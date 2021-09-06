@@ -3,18 +3,21 @@
 <html>
     <head>
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>sign in page</title>
-        <link rel="stylesheet" href="sign in.css">
-        <script src="sign in.js"></script>
+        <title>Question and Answer</title>
+        <link rel="stylesheet" href="Policy.css">
+        <script src="policy.js"></script>
     </head>
-
-    <body>
+    <body onload="currentSlide(1)">
         <!--start header-->
         <br /><br />
         <div class="top-line">
-            <div class="sign-in">
+            <div class="sign-in" onclick="location.href='sign in.html'">
                 <a id="sign-in">Sign In</a>
             </div>
+            <div class="scroll-left">
+                <a id="scroll-left"> WELCOME TO TICKETME ! </a>
+            </div>
+            <div class="black"></div>
         </div>
         <img src="logo.jpeg" alt="logo">
         <br>
@@ -49,29 +52,37 @@
         <br /><br />
         <!--end header-->
 
-        <h2 style="text-align: center">Sign In</h2><br>
-        <form action="/todo" id="sign-in">
-
-            <div class="signIn">
-                <label for="usertName">User name:</label>
-                <input type="text" id="userName" name="User name" required><br><br>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br />
-                <input type="checkbox" onclick="showPassword()">
-                <a id="showPassword">Show password</a>
-
-                <div class="signUpLink" onclick="location.href='registration.html' ">
-                   To sign up... click here !  
-                </div> 
-                <br><br>
-
-                <button type="submit" form="sign-in">Log in</button>
-
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+            
+            <!-- Full-width slides/quotes -->
+            <div class="mySlides">
+                <p class="policeTitle">Private Policy</p>
             </div>
-        </form>
-        <br /><br /><br />
+        
+            <div class="mySlides">
+            <p class="policeTitle">Useg Privacy</p>
+            </div>
+        
+            <div class="mySlides">
+                <p class="policeTitle">How It Work</p>
+            </div>
+        
+            <!-- Next/prev buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        
+
+        
 
         <!--start footer-->
         <table class="footer">
@@ -83,7 +94,7 @@
                     <a onclick="location.href='FAQ.html'">FAQ</a>
                 </td>
                 <td>
-                    <a onclick="location.href='policy.html">Policy</a>
+                    <a onclick="location.href='policy.html'">Policy</a>
                 </td>
                 <td>
                     <a>Follow us:</a><br>

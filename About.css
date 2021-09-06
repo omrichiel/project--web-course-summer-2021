@@ -1,13 +1,6 @@
 * {
     font-family: sans-serif;
 }
-
-h2 {
-    text-align: center;
-    color: purple;
-    font-family: sans-serif;
-}
-
 body {
     margin: 0;
     height: 100vh;
@@ -17,7 +10,12 @@ body {
     background-color: black;
 }
 
-/*start headr*/
+.top-line {
+    display: grid;
+    grid-template-columns: 200px 900px auto;
+}
+
+/*start header*/
 .sign-in {
     display: inline;
     position: relative;
@@ -127,87 +125,18 @@ img[alt="logo"] {
 }
 /*end header*/
 
-
-
-/* contact form*/
-.contact-form {
-    width: 500px;
-    box-shadow: 0 4px 8px 0 purple;
-    border-color: purple;
-    padding: 20px 20px 20px 20px;
-    margin-left: auto;
-    margin-right: auto;
+.about {
+    padding-left: 30px;
 }
 
-p[id="requiredField"] {
-    color: #E64E4E;
+h1{
+    color: mediumorchid ;
 }
 
-label {
-    padding-right: 3px;
-    font-size: 18px;
-    font-weight: bold;
-    color: purple;
-}
-
-input {
-    border: 2px solid;
-    border-color: black;
-    border-bottom-color: purple;
-    background-color: black;
+h4{
     color: white;
-    margin-right: 30px;
-    margin-bottom: 50px;
-}
-
-textarea {
-    border: 2px solid;
-    border-color: purple;
-    background-color: black;
-    margin-bottom: 50px;
-    color: white;
-    width: 100%;
-}
-
-button {
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid;
-    border-color: black;
-    border-radius: 0.5em;
-    padding: 10px 15px 10px 15px;
-    background-color: purple;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: mediumpurple;
-}
-
-.socials {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.socials img {
-    width: 50px;
-    display: inline;
-    cursor: pointer;
-    padding: 0 10px 0 10px;
-}
-
-.socials img:hover {
-    filter: brightness(170%);
-}
-
-.socials div {
-    display: inline-block;
-}
-.socials div p {
-    color: white;
-    text-align: center;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
 }
 
 /*start footer*/
@@ -247,11 +176,5 @@ button:hover {
     .tab {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
-    }
-}
-
-@media only screen and (max-width: 625px) {
-    .contact-form {
-        width: 80%;
     }
 }

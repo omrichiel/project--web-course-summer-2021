@@ -5,7 +5,6 @@
 h2 {
     text-align: center;
     color: purple;
-    font-family: sans-serif;
 }
 
 body {
@@ -127,46 +126,31 @@ img[alt="logo"] {
 }
 /*end header*/
 
-
-
-/* contact form*/
-.contact-form {
-    width: 500px;
+.ticket-container {
+    width: 900px;
     box-shadow: 0 4px 8px 0 purple;
     border-color: purple;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-p[id="requiredField"] {
-    color: #E64E4E;
-}
-
-label {
+h5 {
     padding-right: 3px;
     font-size: 18px;
     font-weight: bold;
-    color: purple;
+    color: white;
+    display: inline-block;
 }
 
-input {
+.ticket-container span a {
     border: 2px solid;
     border-color: black;
     border-bottom-color: purple;
-    background-color: black;
+    background-color:black;
     color: white;
     margin-right: 30px;
     margin-bottom: 50px;
-}
-
-textarea {
-    border: 2px solid;
-    border-color: purple;
-    background-color: black;
-    margin-bottom: 50px;
-    color: white;
-    width: 100%;
 }
 
 button {
@@ -182,32 +166,7 @@ button {
 }
 
 button:hover {
-    background-color: mediumpurple;
-}
-
-.socials {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.socials img {
-    width: 50px;
-    display: inline;
-    cursor: pointer;
-    padding: 0 10px 0 10px;
-}
-
-.socials img:hover {
-    filter: brightness(170%);
-}
-
-.socials div {
-    display: inline-block;
-}
-.socials div p {
-    color: white;
-    text-align: center;
+    background-color: mediumorchid;
 }
 
 /*start footer*/
@@ -243,6 +202,30 @@ button:hover {
 }
 /*end footer*/
 
+@media only screen and (max-width: 900px){
+    h5[id="openGatesTime"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    h5[id="chair"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+    h5[id="area"]::before {
+        content: "\a";
+        white-space: pre;
+    }
+
+    .ticket-container {
+        width: 80%;
+        box-shadow: 0 4px 8px 0 purple;
+        border-color: purple;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media only screen and (max-width: 700px) {
     .tab {
         padding-top: 0.5em;
@@ -250,8 +233,6 @@ button:hover {
     }
 }
 
-@media only screen and (max-width: 625px) {
-    .contact-form {
-        width: 80%;
-    }
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }

@@ -1,13 +1,6 @@
 * {
     font-family: sans-serif;
 }
-
-h2 {
-    text-align: center;
-    color: purple;
-    font-family: sans-serif;
-}
-
 body {
     margin: 0;
     height: 100vh;
@@ -17,7 +10,11 @@ body {
     background-color: black;
 }
 
-/*start headr*/
+.top-line {
+    display: grid;
+    grid-template-columns: 200px 900px auto;
+}
+/*start header*/
 .sign-in {
     display: inline;
     position: relative;
@@ -128,88 +125,6 @@ img[alt="logo"] {
 /*end header*/
 
 
-
-/* contact form*/
-.contact-form {
-    width: 500px;
-    box-shadow: 0 4px 8px 0 purple;
-    border-color: purple;
-    padding: 20px 20px 20px 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-p[id="requiredField"] {
-    color: #E64E4E;
-}
-
-label {
-    padding-right: 3px;
-    font-size: 18px;
-    font-weight: bold;
-    color: purple;
-}
-
-input {
-    border: 2px solid;
-    border-color: black;
-    border-bottom-color: purple;
-    background-color: black;
-    color: white;
-    margin-right: 30px;
-    margin-bottom: 50px;
-}
-
-textarea {
-    border: 2px solid;
-    border-color: purple;
-    background-color: black;
-    margin-bottom: 50px;
-    color: white;
-    width: 100%;
-}
-
-button {
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid;
-    border-color: black;
-    border-radius: 0.5em;
-    padding: 10px 15px 10px 15px;
-    background-color: purple;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: mediumpurple;
-}
-
-.socials {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.socials img {
-    width: 50px;
-    display: inline;
-    cursor: pointer;
-    padding: 0 10px 0 10px;
-}
-
-.socials img:hover {
-    filter: brightness(170%);
-}
-
-.socials div {
-    display: inline-block;
-}
-.socials div p {
-    color: white;
-    text-align: center;
-}
-
 /*start footer*/
 .footer {
     border-top: 10px solid purple;
@@ -235,7 +150,7 @@ button:hover {
 }
 
 .footer tr td a:hover {
-    color: mediumorchid;
+    color: rgb(123, 103, 128);
 }
 
 .footer tr td img:hover {
@@ -250,8 +165,77 @@ button:hover {
     }
 }
 
-@media only screen and (max-width: 625px) {
-    .contact-form {
-        width: 80%;
-    }
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+display: none;
+padding: 80px;
+text-align: center;
+background-color: black;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -30px;
+padding: 16px;
+color: #888;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+position: absolute;
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+text-align: center;
+padding: 20px;
+background: black;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.policeTitle {
+    color: mediumorchid;
+    font-size: 40px;
 }

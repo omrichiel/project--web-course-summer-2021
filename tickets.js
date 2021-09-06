@@ -50,5 +50,59 @@ function removeClass(element, name) {
     element.className = arr1.join(" ");
 }
 
+function sortList() {
+    var ul, i, switching, li, shouldSwitch;
+    ul = document.getElementById("tickets");
+    switching = true;
+    /* Make a loop that will continue until
+    no switching has been done: */
+    while (switching) {
+      // start by saying: no switching is done:
+      switching = false;
+      li = ul.getElementsByTagName("li");
+      // Loop through all list-items:
+      for (i = 0; i < (li.length - 1); i++) {
+        // start by saying there should be no switching:
+        shouldSwitch = false;
+        /* check if the next item should
+        switch place with the current item: */
+        if (li[i].getElementsByTagName("h2").innerHTML.toLowerCase() > li[i + 1].getElementsByTagName("h2").innerHTML.toLowerCase()) {
+          /* if next item is alphabetically
+          lower than current item, mark as a switch
+          and break the loop: */
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        /* If a switch has been marked, make the switch
+        and mark the switch as done: */
+        li[i].parentNode.insertBefore(li[i + 1], li[i]);
+        switching = true;
+      }
+    }
+  }
 
+//search bar
+function search() {
+    let searchInput = document.getElementById('search');
+    searchInput.addEventListener('keyup', filterNames);
+}
+function filterNames() {
+    let searchValue = document.getElementById('search').value.toUpperCase();
+    let ul = document.getElementById('tickets');
+    let li = ul.querySelectorAll('li.filterDiv');
 
+    for (let i = 0; i < li.length; i++) {
+        let eventName = li[i].getElementsByTagName('h2')[0];
+        if (eventName.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
+            li[i].style.display = 'inline-block';
+        } else {
+            li[i].style.display = 'none';
+        }
+    }
+    if (searchValue = "") {
+        li.style.display = 'none';
+        filterSelection('all');
+    }
+}
