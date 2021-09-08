@@ -152,11 +152,6 @@ img[alt="logo"] {
     filter: brightness(200%);
 }
 
-/* The "show" class is added to the filtered elements */
-.show {
-    display: inline-block;
-}
-
 div[id=myBtnContainer] {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;

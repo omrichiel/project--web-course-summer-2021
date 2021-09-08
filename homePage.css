@@ -167,36 +167,6 @@ a[id="scroll-left"] {
     padding-left: 30px;
 }
 
-/*
-.grid-up div{ 
-    width: 300px;
-    height: 100px;
-}
-.grid-up{
-    display: grid;
-    grid-template-areas: 
-    'Logo1  titleName  LI R1'
-    'BTNS BTNS BTNS  BTNS'
-    'searchBar searchBar searchBar searchBar'
-    'C1 C1 C2 C3';
-}
-
-.login{
-    grid-area: LI;
-}
-.Registration{
-    grid-area: R1;
- }
-
-.name{
-    grid-area: titleName;
- }
-
-.logo{
-    grid-area: Logo1;
- }*/
-
-
 .filtered {
     width: 90%;
     margin-left: auto;
