@@ -1,0 +1,375 @@
+* {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.top-line {
+    display: grid;
+    grid-template-columns: 200px 900px auto;
+}
+
+/*start header*/
+.active_user {
+    color: white;
+    margin-left: 30px;
+}
+
+.sign-in {
+    display: inline;
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+a[id="sign-in"], a[id="sign-out"] {
+    color: white;
+    background-color: black;
+    padding: 5px 10px 5px 10px;
+    margin-left: 30px;
+    border: 2px solid;
+    border-color: white;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+a[id="sign-in"]:hover, a[id="sign-out"]:hover {
+    background-color: mediumorchid;
+}
+
+img[alt="logo"] {
+    display: block;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.nav tr td {
+    width: 15%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.nav tr td[id="firstTab"] {
+    width: 15%;
+    padding-left: 0%;
+    padding-right: 1%;
+}
+
+.tab {
+    --c: White;
+    color: purple;
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 1em;
+    height: 2em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.tab span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: mediumorchid;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.tab:hover {
+    color: black;
+}
+
+.tab:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.tab span:nth-child(1) {
+    --n: 1;
+}
+
+.tab span:nth-child(2) {
+    --n: 2;
+}
+
+.tab span:nth-child(3) {
+    --n: 3;
+}
+
+.tab span:nth-child(4) {
+    --n: 4;
+}
+
+.scroll-left {
+    display: inline;
+    background-color: black;
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+a[id="scroll-left"] {
+    position: absolute;
+    color: white;
+    margin-right: 0;
+    /* Apply animation to this element */
+    animation: scroll-left 5s linear infinite;
+}
+
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    from {
+        transform: translateX(900px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+.black {
+    display: inline;
+    background-color: black;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    z-index: 1;
+}
+
+/*end header*/
+
+.tickets {
+    color: purple;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.filtered {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.filterDiv {
+    justify-content: space-evenly;
+    box-shadow: 0 4px 8px 0 purple;
+    width: 300px;
+    text-align: center;
+    color: white;
+    margin: 0 30px 30px 0;
+    display: inline-block;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.filterDiv:hover {
+    filter: brightness(200%);
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.filterDiv button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.filterDiv button:hover {
+    opacity: 0.7;
+}
+
+.datetime {
+    display: inline;
+    grid-auto-columns: auto auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.date {
+    display: inline;
+    padding-right: 50px;
+}
+
+.time {
+    display: inline;
+    padding-left: 50px;
+}
+
+.eventName {
+    color: white;
+    height: 80px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+}
+
+/* The actual popup (appears on top) */
+/*.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}*/
+
+/* Popup arrow */
+/*.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}*/
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    display: none;
+}
+
+.welcome {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: lightgray;
+    border: 3px solid;
+    border-radius: 20px;
+    border-color: purple;
+    display: grid;
+    text-align: center;
+}
+
+.welcome h1 {
+    color: black;
+    text-align: center;
+}
+
+.close:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*start footer*/
+.footer {
+    border-top: 10px solid purple;
+    width: 100%;
+}
+
+.footer tr td{
+    display: inline-block;
+    width: 25%;
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+.footer tr td a {
+    cursor: pointer;
+    color: white;
+}
+
+.footer tr td img {
+    width: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.footer tr td a:hover {
+    color: mediumorchid;
+}
+
+.footer tr td img:hover {
+    filter: brightness(170%);
+}
+/*end footer*/
+
+@media only screen and (max-width: 700px) {
+    .tab {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+}

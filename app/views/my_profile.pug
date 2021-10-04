@@ -1,0 +1,129 @@
+doctype html
+head
+  meta(name='viewpoint' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../stylesheets/my_profile.css')
+  title My profile
+body
+  //- start header
+  br
+  br
+  .sign-in
+    p(class = "active_user" id = "active_user") Hello #{active_user}
+    a(id="sign-in" onclick="location.href='http://localhost:3000/sign_in'") Sign In
+    a(id="sign-out" onclick="location.href='http://localhost:3000/sign_out'") Sign Out
+
+
+  img(src='../img/logo.jpeg' alt='logo')
+  br
+  table.nav
+    tr
+      td#firstTab
+        .tab(onclick="location.href='http://localhost:3000/'")
+          | Home
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/tickets'")
+          | Find Tickets
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/my_profile'")
+          | My Profile
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/Contact_page'")
+          | Contact Us
+          span
+          span
+          span
+          span
+  br
+  br
+  //- end header
+
+  script.
+    console.log(document.getElementById('active_user').innerHTML);
+    if (document.getElementById('active_user').innerHTML == 'Hello guest'){
+      document.getElementById('sign-in').style.display = 'inline-block';
+      document.getElementById('sign-out').style.display = 'none';
+    }
+    else {
+      document.getElementById('sign-in').style.display = 'none';
+      document.getElementById('sign-out').style.display = 'inline-block';
+    }
+
+  table.profileOptions
+    tr
+      td
+        div(onclick="location.href='http://localhost:3000/update_user'") Edit profile details
+      td
+        div(onclick="location.href='http://localhost:3000/add_tickets'") Add tickets for sale
+
+  h1#myTickets My Sale Tickets
+  ul(class="tickets" id="tickets")
+    for saleTicket in forSale
+      li(class="filterDiv "+saleTicket.category)
+        h2(href="#" class="eventName")= saleTicket.event_name
+        p(class="place")= saleTicket.location_name
+        p(class="address")= saleTicket.address
+        p(class="price")= saleTicket.purchase_price
+        .datetime
+          p(class="date")= saleTicket.event_date
+          p(class="time")= saleTicket.start_time
+        br
+        br
+        a(href='http://localhost:3000/tickets/'+saleTicket.ticket_ID) For more details and buy click here
+
+  h1#myTickets My Sells
+  ul(class="tickets" id="tickets")
+    for sellTicket in sells
+      li(class="filterDiv "+sellTicket.category)
+        h2(href="#" class="eventName")= sellTicket.event_name
+        p(class="place")= sellTicket.location_name
+        p(class="address")= sellTicket.address
+        p(class="price")= sellTicket.purchase_price
+        .datetime
+          p(class="date")= sellTicket.event_date
+          p(class="time")= sellTicket.start_time
+        br
+        br
+        a(href='http://localhost:3000/tickets/'+sellTicket.ticket_ID) For more details and buy click here
+
+  h1#myTickets My Purchases
+  ul(class="tickets" id="tickets")
+    for buyTicket in purchases
+      li(class="filterDiv "+buyTicket.category)
+        h2(href="#" class="eventName")= buyTicket.event_name
+        p(class="place")= buyTicket.location_name
+        p(class="address")= buyTicket.address
+        p(class="price")= buyTicket.purchase_price
+        .datetime
+          p(class="date")= buyTicket.event_date
+          p(class="time")= buyTicket.start_time
+        br
+        br
+        a(href='http://localhost:3000/tickets/'+buyTicket.ticket_ID) For more details and buy click here
+
+  //- start footer
+  table.footer
+    tr
+      td
+        a(onclick="location.href='http://localhost:3000/About'") About us
+      td
+        a(onclick="location.href='http://localhost:3000/FAQ'") FAQ
+      td
+        a(onclick="location.href='http://localhost:3000/policy'") Policy
+      td
+        a Follow us:
+        br
+        img(src='../img/imstegram icon.png' alt='Instagram' onclick="window.open('https://instagram.com','_blank')")
+        img(src='../img/facebook icon.png' alt='Facebook' onclick="window.open('https://facebook.com','_blank')")
+  //- end footer

@@ -1,0 +1,131 @@
+doctype html
+head
+  meta(name='viewpoint' content='width=device-width, initial-scale=1.0')
+  title registration page
+  link(rel='stylesheet' href='../stylesheets/registration.css')
+  script(src='../javascripts/registration.js')
+body
+  //- start header
+  br
+  br
+  .sign-in
+    p(class = "active_user" id = "active_user") Hello #{active_user}
+    a(id="sign-in" onclick="location.href='http://localhost:3000/sign_in'") Sign In
+    a(id="sign-out" onclick="location.href='http://localhost:3000/sign_out'") Sign Out
+
+  img(src='../img/logo.jpeg' alt='logo')
+  br
+  table.nav
+    tr
+      td#firstTab
+        .tab(onclick="location.href='http://localhost:3000/'")
+          | Home
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/tickets'")
+          | Find Tickets
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/my_profile'")
+          | My Profile
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/Contact_page'")
+          | Contact Us
+          span
+          span
+          span
+          span
+  br
+  br
+  //- end header
+  
+  script.
+    console.log(document.getElementById('active_user').innerHTML);
+    if (document.getElementById('active_user').innerHTML == 'Hello guest'){
+      document.getElementById('sign-in').style.display = 'inline-block';
+      document.getElementById('sign-out').style.display = 'none';
+    }
+    else {
+      document.getElementById('sign-in').style.display = 'none';
+      document.getElementById('sign-out').style.display = 'inline-block';
+    }
+  
+  h2(style='text-align: center') Sign Up
+  br
+  form#sign-up(action='http://localhost:3000/new_user' method='POST')
+    .signUp
+      label(for='usertname') Username (6 notes minimum): 
+      input#username(type='text' name='username' minlength="6" required)
+      br
+      br
+      label(for='password') Password (8 notes minimum):
+      input#password(type='password' name='password' minlength="8" required)
+      br
+      br
+      input(type='checkbox' onclick='showPassword()')
+      a#showPassword Show password
+      br
+      br
+      label(for='email') E-mail:
+      input#email(type='email' name='email' required)
+      br
+      br
+      label(for='phoneNumber') Phone number (optional):
+      input#phoneNumber(type='tel' name='Phone number')
+      br
+      br
+      label(for='preferences') What events do you like?
+      br
+      .prefDiv
+        input#preferences(type='checkbox' name='concerts')
+        a#concerts.preferences concerts
+        input#preferences(type='checkbox' name='sports')
+        a#sports.preferences sports
+        br
+        input#preferences(type='checkbox' name='standup')
+        a#standup.preferences stand up comedy
+        input#preferences(type='checkbox' name='parties')
+        a#parties.preferences parties
+        br
+        input#preferences(type='checkbox' name='festivals')
+        a#festivals.preferences festivals
+        input#preferences(type='checkbox' name='theater')
+        a#theater.preferences theater
+        br
+        input#preferences(type='checkbox' name='cinema')
+        a#cinema.preferences cinema
+        input#preferences(type='checkbox' name='kids')
+        a#kids.preferences kid&apos;s shows
+      label(for='confirmation') Approval of terms of user
+      input#confirmation(type='checkbox' name='Approval of terms of user' required)
+      br
+      br
+      button(type='submit') Submit
+  br
+  br
+  br
+  //- start footer
+  table.footer
+    tr
+      td
+        a(onclick="location.href='http://localhost:3000/About'") About us
+      td
+        a(onclick="location.href='http://localhost:3000/FAQ'") FAQ
+      td
+        a(onclick="location.href='http://localhost:3000/policy'") Policy
+      td
+        a Follow us:
+        br
+        img(src='../img/imstegram icon.png' alt='Instagram' onclick="window.open('https://instagram.com','_blank')")
+        img(src='../img/facebook icon.png' alt='Facebook' onclick="window.open('https://facebook.com','_blank')")
+  //- end footer

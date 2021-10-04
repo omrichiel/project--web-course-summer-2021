@@ -1,0 +1,97 @@
+doctype html
+head
+  meta(name='viewpoint' content='width=device-width, initial-scale=1.0')
+  title FAQ
+  link(rel='stylesheet' href='../stylesheets/FAQ.css')
+  script(src='../javascripts/FAQ.js')
+body
+  //- start header
+  br
+  br
+  .top-line
+    .sign-in
+      p(class = "active_user" id = "active_user") Hello #{active_user}
+      a(id="sign-in" onclick="location.href='http://localhost:3000/sign_in'") Sign In
+      a(id="sign-out" onclick="location.href='http://localhost:3000/sign_out'") Sign Out
+
+    .scroll-left
+      a#scroll-left  WELCOME TO TICKETME ! 
+    .black
+  img(src='../img/logo.jpeg' alt='logo')
+  br
+  table.nav
+    tr
+      td#firstTab
+        .tab(onclick="location.href='http://localhost:3000/'")
+          | Home
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/tickets'")
+          | Find Tickets
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/my_profile'")
+          | My Profile
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/Contact_page'")
+          | Contact Us
+          span
+          span
+          span
+          span
+  br
+  br
+  //- end header
+
+  script.
+    console.log(document.getElementById('active_user').innerHTML);
+    if (document.getElementById('active_user').innerHTML == 'Hello guest'){
+      document.getElementById('sign-in').style.display = 'inline-block';
+      document.getElementById('sign-out').style.display = 'none';
+    }
+    else {
+      document.getElementById('sign-in').style.display = 'none';
+      document.getElementById('sign-out').style.display = 'inline-block';
+    }
+
+  main
+    h1 Frequently Asked Questions
+    h3 Click on question to see answer and click again to hide it.
+    br
+    p.Qtab(onclick='showAnswer(1)') Question 1
+    p#question1 Answer 1
+    p.Qtab(onclick='showAnswer(2)') Question 2
+    p#question2 Answer 2
+    p.Qtab(onclick='showAnswer(3)') Question 3
+    p#question3 Answer 3
+    p.Qtab(onclick='showAnswer(4)') Question 4
+    p#question4 Answer 4
+    p.Qtab(onclick='showAnswer(5)') Question 5
+    p#question5 Answer 5
+    p.Qtab(onclick='showAnswer(6)') Question 6
+    p#question6 Answer 6
+  //- start footer
+  table.footer
+    tr
+      td
+        a(onclick="location.href='http://localhost:3000/About'") About us
+      td
+        a(onclick="location.href='http://localhost:3000/FAQ'") FAQ
+      td
+        a(onclick="location.href='http://localhost:3000/policy'") Policy
+      td
+        a Follow us:
+        br
+        img(src='../img/imstegram icon.png' alt='Instagram' onclick="window.open('https://instagram.com','_blank')")
+        img(src='../img/facebook icon.png' alt='Facebook' onclick="window.open('https://facebook.com','_blank')")
+  //- end footer

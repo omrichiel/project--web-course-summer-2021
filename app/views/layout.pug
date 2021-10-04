@@ -1,0 +1,60 @@
+html
+    head
+        link(rel="stylesheet", href="../stylesheets/layout.css")
+        title
+    body
+        header
+            br
+            br
+            .sign-in(onclick="location.href='http://localhost:3000/sign_in'")
+                a#sign-in Sign In
+            img(src='../img/logo.jpeg' alt='logo')
+            br
+            table.nav
+                tr
+                td#firstTab
+                    .tab(onclick="location.href='http://localhost:3000/'")
+                    | Home
+                    span
+                    span
+                    span
+                    span
+                td
+                    .tab(onclick="location.href='http://localhost:3000/tickets'")
+                    | Find Tickets
+                    span
+                    span
+                    span
+                    span
+                td
+                    .tab(onclick="location.href='http://localhost:3000/my_profile'")
+                    | My Profile
+                    span
+                    span
+                    span
+                    span
+                td
+                    .tab(onclick="location.href='http://localhost:3000/Contact_page'")
+                    | Contact Us
+                    span
+                    span
+                    span
+                    span
+            br
+            br
+        block content
+        br
+        footer
+            table.footer
+            tr
+            td
+                a(onclick="location.href='http://localhost:3000/About'") About us
+            td
+                a(onclick="location.href='http://localhost:3000/FAQ'") FAQ
+            td
+                a(onclick="location.href='http://localhost:3000/policy'") Policy
+            td
+                a Follow us:
+                br
+                img(src='../img/imstegram icon.png' alt='Instagram' onclick="window.open('https://instagram.com','_blank')")
+                img(src='../img/facebook icon.png' alt='Facebook' onclick="window.open('https://facebook.com','_blank')")

@@ -1,0 +1,143 @@
+doctype html
+head
+  meta(name='viewpoint' content='width=device-width, initial-scale=1.0')
+  title Add New Tickets
+  link(rel='stylesheet' href='../stylesheets/add_tickets.css')
+  script(src='../javascripts/add tickets.js')
+body
+  //- start header
+  br
+  br
+  .sign-in
+    p(class = "active_user" id = "active_user") Hello #{active_user}
+    a(id="sign-in" onclick="location.href='http://localhost:3000/sign_in'") Sign In
+    a(id="sign-out" onclick="location.href='http://localhost:3000/sign_out'") Sign Out
+
+  img(src='../img/logo.jpeg' alt='logo')
+  br
+  table.nav
+    tr
+      td#firstTab
+        .tab(onclick="location.href='http://localhost:3000/'")
+          | Home
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/tickets'")
+          | Find Tickets
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/my_profile'")
+          | My Profile
+          span
+          span
+          span
+          span
+      td
+        .tab(onclick="location.href='http://localhost:3000/Contact_page'")
+          | Contact Us
+          span
+          span
+          span
+          span
+  br
+  br
+  //- end header
+  script.
+    console.log(document.getElementById('active_user').innerHTML);
+    if (document.getElementById('active_user').innerHTML == 'Hello guest'){
+      document.getElementById('sign-in').style.display = 'inline-block';
+      document.getElementById('sign-out').style.display = 'none';
+    }
+    else {
+      document.getElementById('sign-in').style.display = 'none';
+      document.getElementById('sign-out').style.display = 'inline-block';
+    }
+
+  h2 Offer a New Ticket For Sale
+  form#add-ticket(action='/new_ticket' method='POST')
+    .add-ticket
+      p#requiredField *  Required field
+      span
+        p#req *
+        label(for='eventName') Event name:
+        input#eventName(type='text' name='event_name' style='width: 50%' required='')
+        p#req *
+        label(for='category') Category:
+        select#category(name='category' required='')
+          option(value='other') other
+          option(value='concerts') concerts
+          option(value='sports') sports
+          option(value='stand-up-comedy') stent up comedy
+          option(value='parties') parties
+          option(value='festivals') festivals
+          option(value='theater') theater
+          option(value='cinema') cinema
+      br
+      span
+        p#req *
+        label(for='date') Date:
+        input#date(type='date' name='date' required='')
+        p#req *
+        label(for='startTime') Start time:
+        input#startTime(type='time' name='start_time' required='')
+      br
+      span
+        p#req *
+        label(for='location') Location:
+        input#location(type='text' name='location' required='')
+        p#req *
+        label(for='address') Address:
+        input#address(type='text' name='address' required='')
+      br
+      span
+        label(for='row') Row:
+        input#row(type='number' name='row' style='width: 50px' min='0' value='0')
+        label(for='chair') Chair:
+        input#chair(type='number' name='chair' style='width: 50px' min='0' value='0')
+      br
+      span
+        p#req *
+        label(for='purchasePrice') Purchase price (per ticket):
+        input#purchasePrice(type='real' name='purchase_price' style='width: 30px' min='0' required='')
+        p#req *
+        label(for='salePrice') Sale price (per ticket):
+        input#salePrice(type='real' name='sale_price' style='width: 30px' required='')
+        p#req *
+        label(for='quantity') Quantity
+        input#quantity(type='number' name='quantity' style='width: 30px' min='1' required='')
+      br
+      span
+        label(for='phone') Phone number:
+        input#phone(type='text' name='phone' value='0')
+      br
+      span
+        p#req *
+        label(for='attachment') Attach tickets files:
+        input#attachment(type='file' name='attachment' style='cursor: pointer' multiple='' required='')
+      br
+      button(type='submit') Upload
+  br
+  br
+  br
+
+  //- start footer
+  table.footer
+    tr
+      td
+        a(onclick="location.href='http://localhost:3000/About'") About us
+      td
+        a(onclick="location.href='http://localhost:3000/FAQ'") FAQ
+      td
+        a(onclick="location.href='http://localhost:3000/policy'") Policy
+      td
+        a Follow us:
+        br
+        img(src='../img/imstegram icon.png' alt='Instagram' onclick="window.open('https://instagram.com','_blank')")
+        img(src='../img/facebook icon.png' alt='Facebook' onclick="window.open('https://facebook.com','_blank')")
+  //- end footer

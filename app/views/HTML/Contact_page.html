@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="..\stylesheets\Contact_page.css">
+    </head>
+
+    <body>
+        <!--start header-->
+        <br /><br />
+        <div class="sign-in" onclick="location.href='http://localhost:3000/sign_in'">
+            <a id="sign-in">Sign In</a>
+        </div>
+        <img src="..\img\logo.jpeg" alt="logo">
+        <br>
+        <table class="nav">
+            <tr>
+                <td id="firstTab">
+                    <div class="tab" onclick="location.href='http://localhost:3000/home_page'">
+                        Home
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='http://localhost:3000/tickets'">
+                        Find Tickets
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='http://localhost:3000/my_profile'">
+                        My Profile
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='http://localhost:3000/Contact_page'">
+                        Contact Us
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br /><br />
+        <!--end header-->
+
+        <h2 style="text-align: center">Contact Us</h2>
+        <form action="/todo" id="contact-form">
+            <div class="contact-form">
+                <p id="requiredField">*Fill all the fields</p><br /><br />
+                <div class="full_name">
+                    <label for="full_name"> Full name: </label>
+                    <input type="text" id="full_name" name="full_name" required> <br> <br>
+                </div>
+                <div class="phone_num">
+                    <label for="phone_number"> Phone number:</label>
+                    <input type="tel" id="phone_number" name="phone_number" required> <br> <br>
+                </div>
+                <div class="E-mail">
+                    <label for="E-mail"> E-mail:</label>
+                    <input type="email" id="E-mail" name="email" style="width: 70%" required> <br> <br>
+                </div>
+                <div class="message">
+                    <label for="message"> Write your text below: </label> <br>
+                    <textarea name="message" id="message" rows="6" required> </textarea> <br>
+                </div>
+                <button type="submit" form="contact-form">Submit</button>
+            </div>
+        </form>
+        <br>
+        <div class="socials">
+            <img src="..\img\imstegram icon.png" alt="Instagram icon" onclick="window.open('https://instagram.com','_blank')">
+            <div>
+                <p>You can contuct us</p>
+                <p>on the social media</p>
+            </div>
+            <img src="..\img\facebook icon.png" alt="Facebook icon" onclick="window.open('https://facebook.com','_blank')">
+        </div>
+        <br /><br /><br />
+        
+        <!--start footer-->
+        <table class="footer">
+            <tr>
+                <td>
+                    <a onclick="location.href='http://localhost:3000/About'">About us</a>
+                </td>
+                <td>
+                    <a onclick="location.href='http://localhost:3000/FAQ'">FAQ</a>
+                </td>
+                <td>
+                    <a onclick="location.href='http://localhost:3000/policy'">Policy</a>
+                </td>
+                <td>
+                    <a>Follow us:</a><br>
+                    <img src="..\img\imstegram icon.png" alt="Instagram" onclick="window.open('https://instagram.com','_blank')">
+                    <img src="..\img\facebook icon.png" alt="Facebook" onclick="window.open('https://facebook.com','_blank')">
+                </td>
+            </tr>
+        </table>
+        <!--end footer-->
+    </body>
+</html>

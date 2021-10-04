@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Add New Tickets</title>
+        <link rel="stylesheet" href="..\stylesheets\add_tickets.css" />
+        <script src="..\javascripts\add tickets.js"></script>
+    </head>
+
+    <body>
+        <!--start header-->
+        <br /><br />
+        <div class="sign-in" onclick="location.href='http://localhost:3000/sign_in'">
+            <a id="sign-in">Sign In</a>
+        </div>
+        <img src="..\img\logo.jpeg" alt="logo">
+        <br />
+        <table class="nav">
+            <tr>
+                <td id="firstTab">
+                    <div class="tab" onclick="location.href='http://localhost:3000/home_page'">
+                        Home
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='http://localhost:3000/tickets'">
+                        Find Tickets
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='http://localhost:3000/my_profile'">
+                        My Profile
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="tab" onclick="location.href='http://localhost:3000/Contact_page'">
+                        Contact Us
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br /><br />
+        <!--end header-->
+
+        <h2>Offer a New Ticket For Sale</h2>
+        <form action="/new_ticket" method="POST" id="add-ticket">
+            <div class="add-ticket">
+                <p id="requiredField">*  Required field</p>
+                <span>
+                    <p id="req">*</p><label for="eventName">Event name:</label>
+                    <input type="text" id="eventName" name="event_name" style="width: 50%" required>
+                    <p id="req">*</p><label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="other">other</option>
+                        <option value="concerts">concerts</option>
+                        <option value="sports">sports</option>
+                        <option value="stand-up-comedy">stent up comedy</option>
+                        <option value="parties">parties</option>
+                        <option value="festivals">festivals</option>
+                        <option value="theater">theater</option>
+                        <option value="cinema">cinema</option>
+                    </select>
+                </span>
+                <br />
+                <span>
+                    <p id="req">*</p><label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="openGatesTime">Open gates time:</label>
+                    <input type="time" id="openGatesTime" name="open_gates_time">
+                    <p id="req">*</p><label for="startTime">Start time:</label>
+                    <input type="time" id="startTime" name="start_time" required>
+                </span>
+                <br />
+                <span>
+                    <p id="req">*</p><label for="duration">Duration (minutes):</label>
+                    <input type="int" id="duration" name="duration" required>
+                </span>
+                <br />
+                <span>
+                    <p id="req">*</p><label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                    <p id="req">*</p><label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </span>
+                <br />
+                <span>
+                    <label for="row">Row:</label>
+                    <input type="int" id="row" name="row" style="width: 50px" min="0">
+                    <label for="chair">Chair:</label>
+                    <input type="int" id="chair" name="chair" style="width: 50px" min="0">
+                    <label for="area">Area:</label>
+                    <input type="text" id="area" name="area">
+                </span>
+                <br />
+                <span>
+                    <p id="req">*</p><label for="purchasePrice">Purchase price (per ticket):</label>
+                    <input type="text" id="purchasePrice" name="purchase_price" style="width: 30px" min="0" required>
+                    <p id="req">*</p><label for="salePrice">Sale price (per ticket):</label>
+                    <input type="text" id="salePrice" name="sale_price" style="width: 30px" required>
+                    <p id="req">*</p><label for="quantity">Quantity</label>
+                    <input type="int" id="quantity" name="quantity" style="width: 30px" min="1" required>
+                </span>
+                <br />
+                <span>
+                    <label for="phone">Phone number:</label>
+                    <input type="int" id="phone" name="phone">
+                </span>
+                <br />
+                <span>
+                    <label for="discription">Discription:</label><br />
+                    <textarea name="discription" rows="5"></textarea>
+                </span>
+                <br />
+                <span>
+                    <p id="req">*</p><label for="attachment">Attach tickets files:</label>
+                    <input type="file" id="attachment" name="attachment" style="cursor: pointer" multiple required>
+                </span>
+                <br />
+                <button type="submit">Upload</button>
+            </div>
+        </form>
+        <br /><br /><br />
+
+        <!--start footer-->
+        <table class="footer">
+            <tr>
+                <td>
+                    <a onclick="location.href='http://localhost:3000/About'">About us</a>
+                </td>
+                <td>
+                    <a onclick="location.href='http://localhost:3000/FAQ'">FAQ</a>
+                </td>
+                <td>
+                    <a onclick="location.href='http://localhost:3000/policy'">Policy</a>
+                </td>
+                <td>
+                    <a>Follow us:</a><br>
+                    <img src="..\img\imstegram icon.png" alt="Instagram" onclick="window.open('https://instagram.com','_blank')">
+                    <img src="..\img\facebook icon.png" alt="Facebook" onclick="window.open('https://facebook.com','_blank')">
+                </td>
+            </tr>
+        </table>
+        <!--end footer-->
+    </body>
+</html>
