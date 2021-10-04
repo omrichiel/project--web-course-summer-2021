@@ -321,9 +321,9 @@ const getMyProfile = function(req, res) {
     if (active_user == 'guest'){
         res.render('sign in');
     }
-	var forSale = [];
-    var sells = [];
-    var purchases = [];
+	var forSale = [];   //array of all the tickets that the active user uploaded and offers for sale
+    var sells = [];     //array of all the tickets that the active user already sold
+    var purchases = []; //arry of all the tickets that the active user bought 
     sql.query('SELECT * FROM userTickets', [active_user], function(err, rows) {
         if (err) {
             res.status(500).json({"status_code": 500,"status_message": "internal server error"});
@@ -393,6 +393,7 @@ const getMyProfile = function(req, res) {
     });
 }
 
+//active user updating his account details
 const updateUser = function(req, res) {
     // Validate request
     if (!req.body) {
@@ -400,6 +401,7 @@ const updateUser = function(req, res) {
         return;
     }
     const updatePassword = req.body.password;
+    //chainging password
     sql.query("UPDTATE users SET password = ? WHERE username = ?", [updatePassword, active_user], (err, mysqlres) => {
         if (err) {
             console.log("error: ", err);
@@ -412,11 +414,11 @@ const updateUser = function(req, res) {
     });
 }
 
+//get data of the tickets in the home page
 const getHomePage = function(req, res) {
-    var todayEventsList = [];
-    var thisWeeklist = [];
-    var lastUploadsList = [];
-    var discountTicketsList = [];
+    var todayEventsList = [];       //array of all the ticket that occurs today
+    var lastUploadsList = [];       //array of the 10 last uploaded tickets to the website
+    var discountTicketsList = [];   //array of the tickets that sells at lower price then it boughts
     sql.query('SELECT * FROM availableTickets order by upload_time desc', function(err, rows) {
         if (err) {
             res.status(500).json({"status_code": 500,"status_message": "internal server error"});
@@ -483,8 +485,8 @@ const getHomePage = function(req, res) {
                 }
             }
             console.log(discountTicketsList);
-            res.render('home_page', {"todayEventsList": todayEventsList, "thisWeeklist": thisWeeklist, 
-            "lastUploadsList": lastUploadsList, "discountTicketsList":discountTicketsList, 'active_user': active_user});
+            res.render('home_page', {"todayEventsList": todayEventsList,"lastUploadsList": lastUploadsList, 
+                "discountTicketsList":discountTicketsList, 'active_user': active_user});
         }
     });
 }

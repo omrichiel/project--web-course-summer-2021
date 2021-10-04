@@ -15,27 +15,29 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
-
-
+//home route
 app.get("/", CRUD.getHomePage);
 
+//connecting route
 app.get("/connecting", (req, res) =>{
     res.render('connecting');
 });
 
+//disconnecting route 
 app.get("/sign_out", (req, res) =>{
     active_user = 'guest';
     res.render('sign_out');
 });
 
+//get all the available tickets on the tickets page route
 app.get("/tickets", CRUD.getAvailableTickets);
 
-//for specific ticket
+//route to get page of details of the chosen ticket
 app.get("/tickets/:ticket_ID", CRUD.getTicketDetails);
 
 app.get("/my_profile", CRUD.getMyProfile);
 
-//start pug conection
+//get PUG pages routes
 app.get("/About", (req, res) =>{
     res.render('About');
 });
@@ -68,20 +70,18 @@ app.get("/tickets", (req, res) =>{
     res.render('tickets');
 });
 
-//end pug conection
-
-
-//sign in
-app.post("/new_connection", CRUD.addNewConection);
-
-//update_user
-app.post("/update_user_detales", CRUD.updateUser);
-
 app.get("/update_user", (req, res) =>{
     res.render('update_user');
 });
 
-//update_user
+
+//sign in route
+app.post("/new_connection", CRUD.addNewConection);
+
+//update user details route
+app.post("/update_user_details", CRUD.updateUser);
+
+//delete user route
 app.post("/delete_user", CRUD.deleteUser);
 
 //new contact message
